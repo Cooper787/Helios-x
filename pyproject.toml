@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "helios-x"
+version = "0.1.0"
+description = "Helios-X: Autonomous AI Trading & Governance System"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Cooper787", email = "cooper787@example.com"}]
+keywords = ["trading", "ai", "autonomous", "governance", "fintech"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+]
+
+ui = [
+    "streamlit>=1.28.0",
+    "plotly>=5.17.0",
+    "pandas>=2.1.0",
+]
+
+broker = [
+    "ib-insync>=0.9.86",
+]
+
+[project.scripts]
+rogue-x = "rogue_x.cli:main"
+argus-gov = "argus_gov.cli:main"
+helios-api = "helios_api.server:main"
+
+[tool.setuptools]
+packages = ["rogue_x", "argus", "argus_gov", "memory", "openclaw", "strategy", "helios_api"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "rogue-x/tests", "ui_tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-ra -q --strict-markers"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]  # line too long (handled by black)
