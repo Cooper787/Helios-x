@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "helios-x"
-version = "0.1.0"
+version = "0.1.1"
 description = "Helios-X: Autonomous AI Trading & Governance System"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [{name = "Cooper787", email = "cooper787@example.com"}]
+authors = [{name = "Cooper787"}]
 keywords = ["trading", "ai", "autonomous", "governance", "fintech"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -19,7 +19,10 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 
-dependencies = []
+# PyYAML is required by argus.cto and argus_gov.parser
+dependencies = [
+    "pyyaml>=6.0",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -36,19 +39,17 @@ ui = [
 ]
 
 broker = [
-    "ib-insync>=0.9.86",
+    "ib-async>=2.0",
 ]
 
 [project.scripts]
-rogue-x = "rogue_x.cli:main"
 argus-gov = "argus_gov.cli:main"
-helios-api = "helios_api.server:main"
 
-[tool.setuptools]
-packages = ["rogue_x", "argus", "argus_gov", "memory", "openclaw", "strategy", "helios_api"]
+[tool.setuptools.packages.find]
+include = ["argus*", "argus_gov*", "helios_core*", "rogue_x*"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "rogue-x/tests", "ui_tests"]
+testpaths = ["rogue_x/tests", "tests"]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
@@ -57,7 +58,7 @@ addopts = "-ra -q --strict-markers"
 [tool.black]
 line-length = 100
 target-version = ['py311']
-include = '\.pyi?$'
+include = '\\.pyi?$'
 
 [tool.ruff]
 line-length = 100
