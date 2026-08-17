@@ -2,38 +2,51 @@ name: Argus Daily Run
 
 on:
   schedule:
-    # Run daily at 9 AM UTC (5 AM NST / 4 AM NDT)
+    # Run daily at 9 AM UTC (5:30 AM NST / 6:30 AM NDT)
     - cron: '0 9 * * *'
   workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: read
+  issues: write
 
 jobs:
   argus-analysis:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
-      - name: Install dependencies
+
+      - name: Install project
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          if [ -f pyproject.toml ]; then pip install -e .; fi
-      
-      - name: Run Argus Analysis
+          pip install -e ".[dev]"
+
+      - name: Import smoke test
         run: |
-          echo "Running Argus (Autonomous CTO) daily analysis..."
-          # Run Argus governance checks
-          if [ -d argus ]; then
-            python -m argus.validator
-          fi
-          echo "Argus analysis complete."
-      
+          python -c "
+          import argus, argus_gov, helios_core, rogue_x
+          from argus import ArgusCTO, GovernanceEnforcer, ArchitectureValidator
+          from rogue_x.config import TradingConfig
+          from rogue_x.core import RiskManager
+          TradingConfig().validate()
+          print('All packages import and config validates')
+          "
+
+      - name: Run test suite
+        run: pytest -q
+
+      - name: Index governance documents
+        run: |
+          python -m argus_gov index docs --output docs_index.json
+          python -c "import json; d = json.load(open('docs_index.json')); print(f\"Indexed {len(d.get('documents', d))} governance documents\")"
+
       - name: Create Issue if Analysis Fails
         if: failure()
         uses: actions/github-script@v7
@@ -43,6 +56,6 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: 'Argus Daily Analysis Failed',
-              body: 'The Argus daily analysis run has failed. Please review the workflow logs.',
+              body: 'The Argus daily analysis run has failed. Please review the workflow logs: ' + context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.runId,
               labels: ['argus', 'automated']
             })

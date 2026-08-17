@@ -4,8 +4,8 @@ Central coordination layer for the Helios autonomous system.
 """
 
 import logging
-from typing import Dict, List, Any
 from datetime import datetime
+from typing import Any, Dict, List
 
 logger = logging.getLogger(__name__)
 
@@ -49,12 +49,31 @@ class Orchestrator:
                 task["status"] = "executing"
                 task["started_at"] = datetime.now().isoformat()
                 logger.info(f"Executing task: {task_id}")
-                # Task execution logic would go here
-                task["status"] = "completed"
+
+                handler = task.get("handler")
+                if not callable(handler):
+                    # FAIL-CLOSED: no handler means the task cannot run.
+                    # Never mark unexecuted work as completed.
+                    task["status"] = "failed"
+                    task["error"] = "No callable handler attached to task"
+                    task["completed_at"] = datetime.now().isoformat()
+                    self.execution_history.append(task)
+                    self.task_queue.remove(task)
+                    logger.error(f"Task {task_id} failed: no handler")
+                    return False
+
+                try:
+                    task["result"] = handler(task)
+                    task["status"] = "completed"
+                except Exception as e:
+                    task["status"] = "failed"
+                    task["error"] = str(e)
+                    logger.error(f"Task {task_id} raised: {e}")
+
                 task["completed_at"] = datetime.now().isoformat()
                 self.execution_history.append(task)
                 self.task_queue.remove(task)
-                return True
+                return task["status"] == "completed"
         logger.warning(f"Task not found: {task_id}")
         return False
 

@@ -4,8 +4,9 @@ Autonomous CTO that manages technical architecture and governance.
 """
 
 import logging
-from typing import Dict, List, Any, Optional
 from datetime import datetime
+from typing import Any, Dict, List, Optional
+
 import yaml
 
 logger = logging.getLogger(__name__)
@@ -53,15 +54,30 @@ class ArgusCTO:
             }
 
             # Check against governance rules
-            if not self._validate_governance(proposal):
+            gov_ok = self._validate_governance(proposal)
+            if gov_ok is False:
                 review_result["status"] = "rejected"
                 review_result["findings"].append("Governance validation failed")
                 return review_result
 
             # Validate architecture patterns
-            if not self._validate_architecture(proposal):
+            arch_ok = self._validate_architecture(proposal)
+            if arch_ok is False:
                 review_result["status"] = "needs_revision"
                 review_result["findings"].append("Architecture validation issues found")
+                return review_result
+
+            # FAIL-CLOSED: automated validation is not yet implemented (returns None).
+            # Never auto-approve on the basis of unimplemented checks.
+            if gov_ok is None or arch_ok is None:
+                review_result["status"] = "manual_review_required"
+                review_result["findings"].append(
+                    "Automated validation not implemented; human review required before approval"
+                )
+                self.review_queue.append(review_result)
+                logger.warning(
+                    f"Proposal {proposal.get('id')} queued for manual review (fail-closed)"
+                )
                 return review_result
 
             review_result["status"] = "approved"
@@ -73,25 +89,38 @@ class ArgusCTO:
             logger.error(f"Architecture review failed: {e}")
             return {"status": "error", "message": str(e)}
 
-    def _validate_governance(self, proposal: Dict[str, Any]) -> bool:
-        """Validate proposal against governance rules."""
-        # Placeholder for governance validation logic
-        return True
+    def _validate_governance(self, proposal: Dict[str, Any]) -> Optional[bool]:
+        """Validate proposal against governance rules.
 
-    def _validate_architecture(self, proposal: Dict[str, Any]) -> bool:
-        """Validate architectural soundness of proposal."""
-        # Placeholder for architecture validation logic
-        return True
+        Returns:
+            True if compliant, False if a violation is found, None if
+            automated validation is not implemented (caller must fail closed).
+        """
+        # Not yet implemented. Returning None forces manual review (fail-closed);
+        # returning True here would silently auto-approve every proposal.
+        return None
+
+    def _validate_architecture(self, proposal: Dict[str, Any]) -> Optional[bool]:
+        """Validate architectural soundness of proposal.
+
+        Returns:
+            True if sound, False if issues are found, None if automated
+            validation is not implemented (caller must fail closed).
+        """
+        # Not yet implemented. Returning None forces manual review (fail-closed).
+        return None
 
     def enforce_standards(self, component: str, standards: List[str]) -> bool:
-        """Enforce coding and architectural standards."""
-        try:
-            logger.info(f"Enforcing standards for component: {component}")
-            # Implementation would integrate with linters, validators, etc.
-            return True
-        except Exception as e:
-            logger.error(f"Failed to enforce standards: {e}")
-            return False
+        """Enforce coding and architectural standards.
+
+        Not yet implemented; returns False (fail-closed) so callers never
+        treat unenforced standards as enforced.
+        """
+        logger.warning(
+            f"enforce_standards not implemented for component '{component}'; "
+            "returning False (fail-closed)"
+        )
+        return False
 
     def generate_architecture_report(self) -> Dict[str, Any]:
         """Generate comprehensive architecture status report."""
