@@ -1,10 +1,26 @@
 name: Argus Daily Run
 
+# SCHEDULE DISABLED 2026-08-17.
+#
+# Argus is development governance: it reviews architecture proposals, code
+# changes, and governance documents. It plays no part in generating a trade
+# signal -- helios_signals does not import it, and every public method in the
+# package operates on proposals and components, not prices or positions.
+#
+# This was NOT disabled because it was broken. As of ad86360 every step
+# passes. It is disabled because ci.yml already runs the same checks on every
+# push, so a nightly repeat produces no new information while spending Actions
+# minutes that helios-nightly needs -- particularly once this repository is
+# made private and the free quota drops to 2,000 minutes/month.
+#
+# To re-enable, restore the `schedule:` block below. Until then it remains
+# runnable on demand via workflow_dispatch.
+#
+#  schedule:
+#    - cron: '0 9 * * *'   # daily 09:00 UTC
+
 on:
-  schedule:
-    # Run daily at 9 AM UTC (5:30 AM NST / 6:30 AM NDT)
-    - cron: '0 9 * * *'
-  workflow_dispatch:  # Allow manual triggering
+  workflow_dispatch:  # manual only
 
 permissions:
   contents: read
