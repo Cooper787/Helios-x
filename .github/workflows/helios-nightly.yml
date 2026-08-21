@@ -54,7 +54,9 @@ jobs:
       - name: Install
         run: |
           python -m pip install --upgrade pip
-          pip install -e .
+          # The dev extra carries pytest. Without it the self-test step below
+          # cannot run, and a self-test that cannot run is not a self-test.
+          pip install -e ".[dev]"
 
       - name: Self-test before trusting the pipeline
         # A run that emits trade recommendations from unverified code is worse
