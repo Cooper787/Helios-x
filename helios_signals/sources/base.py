@@ -8,12 +8,14 @@ infrastructure.
 
 from __future__ import annotations
 
+import gzip
 import json
 import logging
 import random
 import time
 import urllib.error
 import urllib.request
+import zlib
 from typing import Any, Dict, Optional
 
 logger = logging.getLogger(__name__)
@@ -66,7 +68,8 @@ class HttpJsonClient:
                 req = urllib.request.Request(url, headers=hdrs)
                 with urllib.request.urlopen(req, timeout=self.timeout_s) as resp:
                     raw = resp.read()
-                return json.loads(raw.decode("utf-8"))
+                    encoding = resp.headers.get("Content-Encoding", "")
+                return json.loads(_decode_body(raw, encoding))
 
             except urllib.error.HTTPError as exc:
                 last_error = exc
@@ -86,7 +89,14 @@ class HttpJsonClient:
                     "HTTP %s from %s (attempt %d/%d)", exc.code, url, attempt, self.max_retries
                 )
 
-            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            except (
+                urllib.error.URLError,
+                TimeoutError,
+                json.JSONDecodeError,
+                UnicodeDecodeError,
+                zlib.error,
+                OSError,
+            ) as exc:
                 last_error = exc
                 logger.warning(
                     "%s reading %s (attempt %d/%d)",
@@ -105,6 +115,32 @@ class HttpJsonClient:
         raise SourceError(
             f"Failed to read {url} after {self.max_retries} attempts: {last_error}"
         ) from last_error
+
+
+def _decode_body(raw: bytes, content_encoding: str) -> str:
+    """Decode a response body, honouring Content-Encoding.
+
+    The client advertises `Accept-Encoding: gzip, deflate` because these are
+    large JSON payloads over public infrastructure and it is rude not to. urllib
+    does not decompress for you, so without this the first byte of a gzip stream
+    (0x1f 0x8b) reaches json.loads and the run dies with a UnicodeDecodeError
+    that names neither gzip nor the URL. That is exactly what happened on the
+    first live run: clinicaltrials.gov honoured the header and the pipeline
+    crashed before it could write a ledger entry.
+
+    Some servers gzip regardless of the header, so the magic-number check runs
+    even when Content-Encoding is absent.
+    """
+    enc = (content_encoding or "").strip().lower()
+    if enc == "gzip" or raw[:2] == b"\x1f\x8b":
+        raw = gzip.decompress(raw)
+    elif enc == "deflate":
+        try:
+            raw = zlib.decompress(raw)
+        except zlib.error:
+            # Raw deflate stream without the zlib wrapper.
+            raw = zlib.decompress(raw, -zlib.MAX_WBITS)
+    return raw.decode("utf-8")
 
 
 def dig(obj: Any, *path: str, default: Any = None) -> Any:

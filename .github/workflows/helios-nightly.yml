@@ -71,10 +71,13 @@ jobs:
           HELIOS_USER_AGENT: ${{ secrets.HELIOS_USER_AGENT }}
         run: |
           set +e
+          # stderr is merged into run.log on purpose: logging and tracebacks go
+          # to stderr, and run.log is what the failure issue quotes. Run #2
+          # opened an issue with an empty log block for exactly this reason.
           python -m helios_signals.run_nightly \
             ${{ inputs.dry_run && '--dry-run' || '' }} \
             ${{ inputs.as_of && format('--as-of {0}', inputs.as_of) || '' }} \
-            | tee run.log
+            2>&1 | tee run.log
           echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
 
       - name: Commit the ledger

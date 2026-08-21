@@ -9,6 +9,16 @@ which is worse than silence because it is indistinguishable from a good one.
 **Report everything.** Every source reports records and timing, every rejection
 carries a reason. A source that silently returns zero rows must be visibly
 different from a genuinely quiet night.
+
+**Source calls catch `Exception`, not just `SourceError`.** This is deliberate
+and not laziness. A source raising something unforeseen -- a schema change, a
+decoding surprise, a bug in our own parser -- means exactly what a declared
+`SourceError` means: this source cannot be trusted tonight. Letting it escape
+skips the ledger write and the veto log, so the run leaves no record of having
+happened. The first live run proved this: an undecompressed gzip body raised
+`UnicodeDecodeError`, the process died at exit code 2, and `run.log` was empty.
+A degraded run that writes a ledger entry and names the failing source is
+strictly more useful than a crash.
 """
 
 from __future__ import annotations
@@ -33,7 +43,6 @@ from .models import (
 from .profiles import BIOTECH, SectorProfile
 from .screens import screen_catalyst_window, screen_dilution
 from .screens.biotech import screen_materiality
-from .sources.base import SourceError
 from .sources.clinicaltrials import ClinicalTrialsSource
 from .sources.sec import CompanyFactsSource, TickerResolver
 
@@ -109,7 +118,7 @@ class SignalEngine:
         started = time.monotonic()
         try:
             catalysts = self.catalysts_source.fetch(self.config.tracked_phases)
-        except SourceError as exc:
+        except Exception as exc:  # noqa: BLE001 - see note below
             report.sources.append(
                 SourceReport(
                     self.catalysts_source.name, False, 0,
@@ -134,7 +143,7 @@ class SignalEngine:
         started = time.monotonic()
         try:
             count = self.resolver.load()
-        except SourceError as exc:
+        except Exception as exc:  # noqa: BLE001 - see _load_catalysts
             report.sources.append(
                 SourceReport(
                     self.resolver.name, False, 0,
@@ -244,7 +253,18 @@ class SignalEngine:
                 )
                 continue
 
-            runway = self.facts.fetch(cik)
+            try:
+                runway = self.facts.fetch(cik)
+            except Exception as exc:  # noqa: BLE001 - see _load_catalysts
+                logger.exception("Runway fetch failed for %s", ticker)
+                report.sources.append(
+                    SourceReport(
+                        self.facts.name, False, runway_calls,
+                        int((time.monotonic() - runway_started) * 1000),
+                        f"{type(exc).__name__}: {exc}",
+                    )
+                )
+                return []
             runway_calls += 1
             dilution = screen_dilution(runway, self.config)
             if not dilution.passed:

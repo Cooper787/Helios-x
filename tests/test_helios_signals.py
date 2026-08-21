@@ -7,7 +7,9 @@ a test rather than a 09:00 UTC production run.
 
 from __future__ import annotations
 
+import gzip
 import json
+import zlib
 from datetime import date, timedelta
 
 import pytest
@@ -31,7 +33,7 @@ from helios_signals.notify.telegram import (
 )
 from helios_signals.screens.catalyst_window import screen_catalyst_window
 from helios_signals.screens.dilution import screen_dilution
-from helios_signals.sources.base import HttpJsonClient, SourceError, dig
+from helios_signals.sources.base import HttpJsonClient, SourceError, _decode_body, dig
 from helios_signals.sources.clinicaltrials import ClinicalTrialsSource, parse_ct_date
 from helios_signals.sources.sec import (
     CompanyFactsSource,
@@ -90,16 +92,19 @@ def make_study(
 class FakeClient:
     """Stands in for HttpJsonClient; returns canned payloads by URL substring."""
 
-    def __init__(self, routes, fail_on=None):
+    def __init__(self, routes, fail_on=None, raises=SourceError):
         self.routes = routes
         self.fail_on = fail_on or []
         self.calls = []
+        # Sources can fail in ways they never declared. `raises` lets a test
+        # simulate that instead of only the well-behaved SourceError.
+        self.raises = raises
 
     def get_json(self, url, headers=None):
         self.calls.append(url)
         for frag in self.fail_on:
             if frag in url:
-                raise SourceError(f"simulated failure for {frag}")
+                raise self.raises(f"simulated failure for {frag}")
         for frag, payload in self.routes.items():
             if frag in url:
                 return payload
@@ -126,6 +131,42 @@ class TestHttpJsonClient:
 
     def test_dig_treats_none_as_default(self):
         assert dig({"a": None}, "a", default=5) == 5
+
+
+class TestResponseDecoding:
+    """The client advertises gzip, so it must be able to read gzip back.
+
+    The first live run died here: clinicaltrials.gov honoured
+    `Accept-Encoding: gzip`, urllib handed back the compressed bytes untouched,
+    and `json.loads` met 0x1f 0x8b. Exit code 2, empty log, no ledger entry.
+    """
+
+    PAYLOAD = '{"studies": [{"nct": "NCT001"}]}'
+
+    def test_gzip_declared_by_header(self):
+        raw = gzip.compress(self.PAYLOAD.encode())
+        assert json.loads(_decode_body(raw, "gzip"))["studies"][0]["nct"] == "NCT001"
+
+    def test_gzip_with_no_header_is_still_detected(self):
+        """Some servers compress regardless of what they announce."""
+        raw = gzip.compress(self.PAYLOAD.encode())
+        assert _decode_body(raw, "") == self.PAYLOAD
+
+    def test_gzip_header_casing_and_whitespace(self):
+        raw = gzip.compress(self.PAYLOAD.encode())
+        assert _decode_body(raw, " GZIP ") == self.PAYLOAD
+
+    def test_zlib_wrapped_deflate(self):
+        assert _decode_body(zlib.compress(self.PAYLOAD.encode()), "deflate") == self.PAYLOAD
+
+    def test_raw_deflate_without_zlib_wrapper(self):
+        co = zlib.compressobj(9, zlib.DEFLATED, -zlib.MAX_WBITS)
+        raw = co.compress(self.PAYLOAD.encode()) + co.flush()
+        assert _decode_body(raw, "deflate") == self.PAYLOAD
+
+    def test_identity_passes_through(self):
+        assert _decode_body(self.PAYLOAD.encode(), "") == self.PAYLOAD
+        assert _decode_body(self.PAYLOAD.encode(), "identity") == self.PAYLOAD
 
 
 # ------------------------------------------------------------ clinicaltrials
@@ -416,12 +457,14 @@ class TestConfigValidation:
 # -------------------------------------------------------------------- engine
 
 
-def build_engine(studies, tickers, facts, price=None, fail_on=None, **overrides):
+def build_engine(studies, tickers, facts, price=None, fail_on=None,
+                 raises=SourceError, **overrides):
     client = FakeClient(
         {"clinicaltrials.gov": {"studies": studies},
          "company_tickers": tickers,
          "companyfacts": facts},
         fail_on=fail_on,
+        raises=raises,
     )
     cfg = SignalConfig()
     for k, v in overrides.items():
@@ -434,6 +477,15 @@ def build_engine(studies, tickers, facts, price=None, fail_on=None, **overrides)
         account=AccountConfig(capital=1000.0),
         price_lookup=(lambda t: price) if price is not None else None,
     )
+
+
+def make_unicode_decode_error(message):
+    """UnicodeDecodeError cannot be raised with a single string argument.
+
+    This is the exact exception the first live run died on, so it is worth
+    testing the real type rather than a stand-in.
+    """
+    return UnicodeDecodeError("utf-8", b"\x1f\x8b", 1, 2, str(message))
 
 
 TICKERS = {"0": {"cik_str": 1234567, "ticker": "ACME", "title": "Acme Therapeutics Inc"}}
@@ -464,6 +516,35 @@ class TestEngine:
         assert not rep.healthy
         assert rep.signals == []
         assert any(not s.ok for s in rep.sources)
+
+    @pytest.mark.parametrize(
+        "exc", [make_unicode_decode_error, ValueError, KeyError, RuntimeError]
+    )
+    def test_undeclared_source_exception_degrades_rather_than_crashes(self, exc):
+        """An unforeseen failure means the same thing as a declared one.
+
+        If it escapes the engine, the process dies before the ledger is written
+        and the run leaves no trace of having happened. The first live run did
+        exactly this on an undecompressed gzip body.
+        """
+        eng = build_engine([], TICKERS, facts_payload(1e7, -1e6), price=20.0,
+                           fail_on=["clinicaltrials.gov"], raises=exc)
+        rep = eng.run(as_of=TODAY)
+
+        assert not rep.healthy
+        assert rep.signals == []
+        assert rep.fatal_error is None, "a bad source is degraded, not fatal"
+        bad = [s for s in rep.sources if not s.ok]
+        assert bad and bad[0].error, "the failing source must name itself"
+
+    def test_undeclared_resolver_exception_degrades(self):
+        studies = [make_study("NCT1", "Acme Therapeutics Inc",
+                              (TODAY + timedelta(days=40)).isoformat())]
+        eng = build_engine(studies, TICKERS, facts_payload(1e7, -1e6), price=20.0,
+                           fail_on=["company_tickers"], raises=RuntimeError)
+        rep = eng.run(as_of=TODAY)
+        assert not rep.healthy
+        assert rep.signals == []
 
     def test_dilution_veto_blocks_signal(self):
         studies = [make_study("NCT1", "Acme Therapeutics Inc",
