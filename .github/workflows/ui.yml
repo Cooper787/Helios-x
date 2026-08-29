@@ -41,7 +41,7 @@ jobs:
           pytest -q ui_tests
       - name: Upload UI artifacts (if any)
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ui-artifacts
           path: |
