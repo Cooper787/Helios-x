@@ -1,47 +1,285 @@
 {
   "catalysts_found": 3386,
-  "catalysts_in_window": 107,
+  "catalysts_in_window": 106,
   "dry_run": true,
   "fatal_error": null,
-  "finished_at": "2026-08-29T07:30:59.041201+00:00",
+  "finished_at": "2026-08-30T06:00:00.159097+00:00",
   "healthy": true,
-  "run_id": "2026-08-29-964aab4b",
-  "signals": [],
+  "run_id": "2026-08-30-0fbea03b",
+  "signals": [
+    {
+      "catalyst": {
+        "cik": "0001520262",
+        "conditions": [
+          "Schizophrenia",
+          "Bipolar I Disorder"
+        ],
+        "date_is_estimated": true,
+        "design": {
+          "allocation": "RANDOMIZED",
+          "enrollment": 220,
+          "enrollment_is_estimated": true,
+          "masking": "QUADRUPLE",
+          "primary_purpose": "TREATMENT"
+        },
+        "event_date": "2026-09-30",
+        "event_type": "phase_3_completion",
+        "external_id": "NCT05303064",
+        "intervention_names": [
+          "OLZ/SAM",
+          "Olanzapine"
+        ],
+        "intervention_types": [
+          "DRUG",
+          "DRUG"
+        ],
+        "phase_label": "PHASE3",
+        "provenance": {
+          "retrieved_at": "2026-08-30T05:59:53.257540+00:00",
+          "source": "clinicaltrials.gov",
+          "url": "https://clinicaltrials.gov/study/NCT05303064"
+        },
+        "sponsor": "Alkermes, Inc.",
+        "sponsor_class": "INDUSTRY",
+        "ticker": "ALKS",
+        "title": "Study to Evaluate Weight Gain as Assessed by Change in BMI Z-score in Pediatric Subjects With Schizophrenia or Bipolar I Disorder"
+      },
+      "caveats": [
+        "Primary completion date is when data collection ends, not when results are announced. The real catalyst may land weeks later.",
+        "Exit before the readout. A failed trial gaps 40-70% pre-market and a stop order will not protect you.",
+        "Event date is the sponsor's estimate and can move without notice.",
+        "Market cap unknown, so materiality was not checked. Confirm this readout is large relative to the company before acting.",
+        "Base rates - Phase 3 to filing: 58% (UNVERIFIED); All indications, Phase 1 to approval: 8% (UNVERIFIED). These are unverified approximations shown for context only; they do not affect sizing or selection."
+      ],
+      "decision": "no_action",
+      "entry_price": null,
+      "exit_by": "2026-09-25",
+      "generated_at": "2026-08-30T05:59:59.959264+00:00",
+      "position_value": null,
+      "quantity": null,
+      "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
+      "screens": [
+        {
+          "detail": {
+            "date_is_estimated": true,
+            "days_to_catalyst": 31,
+            "event_date": "2026-09-30"
+          },
+          "name": "catalyst_window",
+          "passed": true,
+          "reason": "In the entry window at T-31"
+        },
+        {
+          "detail": {
+            "sponsor": "Alkermes, Inc.",
+            "sponsor_class": "INDUSTRY"
+          },
+          "name": "sponsor_class",
+          "passed": true,
+          "reason": "Industry-sponsored"
+        },
+        {
+          "detail": {
+            "intervention_types": [
+              "DRUG",
+              "DRUG"
+            ],
+            "tradeable_types": [
+              "DRUG"
+            ]
+          },
+          "name": "intervention_type",
+          "passed": true,
+          "reason": "Tradeable intervention: DRUG"
+        },
+        {
+          "detail": {
+            "allocation": "RANDOMIZED",
+            "enrollment": 220,
+            "enrollment_is_estimated": true,
+            "masking": "QUADRUPLE",
+            "min_enrollment": 100,
+            "primary_purpose": "TREATMENT"
+          },
+          "name": "trial_quality",
+          "passed": true,
+          "reason": "Enrollment 220 clears the 100 floor (randomised, masked)"
+        },
+        {
+          "detail": {
+            "cash_usd": 511529000.0,
+            "cik": "0001520262",
+            "note": "",
+            "quarterly_burn_usd": 165743000.0,
+            "runway_months": 9.3,
+            "source": "sec.companyfacts"
+          },
+          "name": "dilution",
+          "passed": true,
+          "reason": "Cash runway 9.3 months clears the 6-month floor"
+        },
+        {
+          "detail": {
+            "market_cap_usd": null,
+            "max_market_cap_usd": 10000000000.0
+          },
+          "name": "materiality",
+          "passed": true,
+          "reason": "Market cap unavailable (no price source wired), so materiality could not be assessed. A readout at a large-cap sponsor may not move the stock."
+        }
+      ],
+      "stop_loss": null,
+      "ticker": "ALKS"
+    },
+    {
+      "catalyst": {
+        "cik": "0000879169",
+        "conditions": [
+          "Hidradenitis Suppurativa"
+        ],
+        "date_is_estimated": true,
+        "design": {
+          "allocation": "RANDOMIZED",
+          "enrollment": 580,
+          "enrollment_is_estimated": false,
+          "masking": "QUADRUPLE",
+          "primary_purpose": "TREATMENT"
+        },
+        "event_date": "2026-10-09",
+        "event_type": "phase_3_completion",
+        "external_id": "NCT06959225",
+        "intervention_names": [
+          "Ruxolitinib Cream",
+          "Vehicle Cream"
+        ],
+        "intervention_types": [
+          "DRUG",
+          "DRUG"
+        ],
+        "phase_label": "PHASE3",
+        "provenance": {
+          "retrieved_at": "2026-08-30T05:59:54.916113+00:00",
+          "source": "clinicaltrials.gov",
+          "url": "https://clinicaltrials.gov/study/NCT06959225"
+        },
+        "sponsor": "Incyte Corporation",
+        "sponsor_class": "INDUSTRY",
+        "ticker": "INCY",
+        "title": "Study to Evaluate the Efficacy and Safety of Ruxolitinib Cream in Participants With Hidradenitis Suppurativa (TRuE-HS1)"
+      },
+      "caveats": [
+        "Primary completion date is when data collection ends, not when results are announced. The real catalyst may land weeks later.",
+        "Exit before the readout. A failed trial gaps 40-70% pre-market and a stop order will not protect you.",
+        "Event date is the sponsor's estimate and can move without notice.",
+        "Market cap unknown, so materiality was not checked. Confirm this readout is large relative to the company before acting.",
+        "Base rates - Phase 3 to filing: 58% (UNVERIFIED); All indications, Phase 1 to approval: 8% (UNVERIFIED). These are unverified approximations shown for context only; they do not affect sizing or selection."
+      ],
+      "decision": "no_action",
+      "entry_price": null,
+      "exit_by": "2026-10-04",
+      "generated_at": "2026-08-30T06:00:00.158801+00:00",
+      "position_value": null,
+      "quantity": null,
+      "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
+      "screens": [
+        {
+          "detail": {
+            "date_is_estimated": true,
+            "days_to_catalyst": 40,
+            "event_date": "2026-10-09"
+          },
+          "name": "catalyst_window",
+          "passed": true,
+          "reason": "In the entry window at T-40"
+        },
+        {
+          "detail": {
+            "sponsor": "Incyte Corporation",
+            "sponsor_class": "INDUSTRY"
+          },
+          "name": "sponsor_class",
+          "passed": true,
+          "reason": "Industry-sponsored"
+        },
+        {
+          "detail": {
+            "intervention_types": [
+              "DRUG",
+              "DRUG"
+            ],
+            "tradeable_types": [
+              "DRUG"
+            ]
+          },
+          "name": "intervention_type",
+          "passed": true,
+          "reason": "Tradeable intervention: DRUG"
+        },
+        {
+          "detail": {
+            "allocation": "RANDOMIZED",
+            "enrollment": 580,
+            "enrollment_is_estimated": false,
+            "masking": "QUADRUPLE",
+            "min_enrollment": 100,
+            "primary_purpose": "TREATMENT"
+          },
+          "name": "trial_quality",
+          "passed": true,
+          "reason": "Enrollment 580 clears the 100 floor (randomised, masked)"
+        },
+        {
+          "detail": {
+            "cash_usd": 3461114000.0,
+            "cik": "0000879169",
+            "note": "operating cash flow non-negative",
+            "quarterly_burn_usd": -369351000.0,
+            "runway_months": "infinite",
+            "source": "sec.companyfacts"
+          },
+          "name": "dilution",
+          "passed": true,
+          "reason": "Operating cash flow is non-negative; no near-term dilution pressure"
+        },
+        {
+          "detail": {
+            "market_cap_usd": null,
+            "max_market_cap_usd": 10000000000.0
+          },
+          "name": "materiality",
+          "passed": true,
+          "reason": "Market cap unavailable (no price source wired), so materiality could not be assessed. A readout at a large-cap sponsor may not move the stock."
+        }
+      ],
+      "stop_loss": null,
+      "ticker": "INCY"
+    }
+  ],
   "sources": [
     {
-      "elapsed_ms": 10614,
+      "elapsed_ms": 8054,
       "error": null,
       "name": "clinicaltrials.gov",
       "ok": true,
       "records": 3504
     },
     {
-      "elapsed_ms": 140,
+      "elapsed_ms": 173,
       "error": null,
       "name": "sec.company_tickers",
       "ok": true,
       "records": 6522
     },
     {
-      "elapsed_ms": 54018,
+      "elapsed_ms": 1005,
       "error": null,
       "name": "sec.companyfacts",
       "ok": true,
-      "records": 5
+      "records": 4
     }
   ],
-  "started_at": "2026-08-29T07:29:54.261966+00:00",
+  "started_at": "2026-08-30T05:59:50.920340+00:00",
   "vetoes": [
-    {
-      "detail": {
-        "sponsor": "The Netherlands Cancer Institute",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT07310758",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "The Netherlands Cancer Institute"
-    },
     {
       "external_id": "NCT06664619",
       "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
@@ -202,13 +440,13 @@
       "detail": {
         "cash_usd": null,
         "cik": "0000901832",
-        "note": "facts unavailable: Failed to read https://data.sec.gov/api/xbrl/companyfacts/CIK0000901832.json after 4 attempts: HTTP Error 429: Too Many Requests",
+        "note": "no us-gaap facts present",
         "quarterly_burn_usd": null,
         "runway_months": null,
         "source": "sec.companyfacts"
       },
       "external_id": "NCT05557838",
-      "reason": "Cash runway could not be determined (facts unavailable: Failed to read https://data.sec.gov/api/xbrl/companyfacts/CIK0000901832.json after 4 attempts: HTTP Error 429: Too Many Requests). Vetoing: unknown is not the same as safe.",
+      "reason": "Cash runway could not be determined (no us-gaap facts present). Vetoing: unknown is not the same as safe.",
       "screen": "dilution",
       "sponsor": "AstraZeneca",
       "ticker": "AZN"
@@ -217,13 +455,13 @@
       "detail": {
         "cash_usd": null,
         "cik": "0000901832",
-        "note": "facts unavailable: Failed to read https://data.sec.gov/api/xbrl/companyfacts/CIK0000901832.json after 4 attempts: HTTP Error 429: Too Many Requests",
+        "note": "no us-gaap facts present",
         "quarterly_burn_usd": null,
         "runway_months": null,
         "source": "sec.companyfacts"
       },
       "external_id": "NCT05221840",
-      "reason": "Cash runway could not be determined (facts unavailable: Failed to read https://data.sec.gov/api/xbrl/companyfacts/CIK0000901832.json after 4 attempts: HTTP Error 429: Too Many Requests). Vetoing: unknown is not the same as safe.",
+      "reason": "Cash runway could not be determined (no us-gaap facts present). Vetoing: unknown is not the same as safe.",
       "screen": "dilution",
       "sponsor": "AstraZeneca",
       "ticker": "AZN"
@@ -249,21 +487,6 @@
       "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
       "screen": "ticker_resolution",
       "sponsor": "Shanghai JMT-Bio Inc."
-    },
-    {
-      "detail": {
-        "cash_usd": null,
-        "cik": "0001520262",
-        "note": "facts unavailable: Failed to read https://data.sec.gov/api/xbrl/companyfacts/CIK0001520262.json after 4 attempts: HTTP Error 429: Too Many Requests",
-        "quarterly_burn_usd": null,
-        "runway_months": null,
-        "source": "sec.companyfacts"
-      },
-      "external_id": "NCT05303064",
-      "reason": "Cash runway could not be determined (facts unavailable: Failed to read https://data.sec.gov/api/xbrl/companyfacts/CIK0001520262.json after 4 attempts: HTTP Error 429: Too Many Requests). Vetoing: unknown is not the same as safe.",
-      "screen": "dilution",
-      "sponsor": "Alkermes, Inc.",
-      "ticker": "ALKS"
     },
     {
       "detail": {
@@ -901,21 +1124,6 @@
     },
     {
       "detail": {
-        "cash_usd": null,
-        "cik": "0000879169",
-        "note": "facts unavailable: Failed to read https://data.sec.gov/api/xbrl/companyfacts/CIK0000879169.json after 4 attempts: HTTP Error 429: Too Many Requests",
-        "quarterly_burn_usd": null,
-        "runway_months": null,
-        "source": "sec.companyfacts"
-      },
-      "external_id": "NCT06959225",
-      "reason": "Cash runway could not be determined (facts unavailable: Failed to read https://data.sec.gov/api/xbrl/companyfacts/CIK0000879169.json after 4 attempts: HTTP Error 429: Too Many Requests). Vetoing: unknown is not the same as safe.",
-      "screen": "dilution",
-      "sponsor": "Incyte Corporation",
-      "ticker": "INCY"
-    },
-    {
-      "detail": {
         "sponsor": "ZhongShan LaiBo RuiChen BioMedicine Co.,Ltd.",
         "sponsor_class": "OTHER_GOV"
       },
@@ -985,18 +1193,9 @@
       "sponsor": "Solid Biosciences Inc."
     },
     {
-      "detail": {
-        "cash_usd": null,
-        "cik": "0000879169",
-        "note": "facts unavailable: Failed to read https://data.sec.gov/api/xbrl/companyfacts/CIK0000879169.json after 4 attempts: HTTP Error 429: Too Many Requests",
-        "quarterly_burn_usd": null,
-        "runway_months": null,
-        "source": "sec.companyfacts"
-      },
       "external_id": "NCT06516965",
-      "reason": "Cash runway could not be determined (facts unavailable: Failed to read https://data.sec.gov/api/xbrl/companyfacts/CIK0000879169.json after 4 attempts: HTTP Error 429: Too Many Requests). Vetoing: unknown is not the same as safe.",
-      "screen": "dilution",
-      "sponsor": "Incyte Corporation",
+      "reason": "A signal for INCY was already issued this run from an earlier catalyst.",
+      "screen": "one_position_per_ticker",
       "ticker": "INCY"
     },
     {
