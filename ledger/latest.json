@@ -1,11 +1,11 @@
 {
   "catalysts_found": 3356,
-  "catalysts_in_window": 95,
+  "catalysts_in_window": 93,
   "dry_run": true,
   "fatal_error": null,
-  "finished_at": "2026-09-12T05:12:46.144325+00:00",
+  "finished_at": "2026-09-13T05:27:32.131737+00:00",
   "healthy": true,
-  "run_id": "2026-09-12-a06df96c",
+  "run_id": "2026-09-13-db45c7fe",
   "signals": [
     {
       "catalyst": {
@@ -38,7 +38,7 @@
         ],
         "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-09-12T05:12:39.290251+00:00",
+          "retrieved_at": "2026-09-13T05:27:24.036371+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT05133531"
         },
@@ -57,7 +57,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-10-07",
-      "generated_at": "2026-09-12T05:12:45.552988+00:00",
+      "generated_at": "2026-09-13T05:27:31.902258+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -65,12 +65,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 30,
+            "days_to_catalyst": 29,
             "event_date": "2026-10-12"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-30"
+          "reason": "In the entry window at T-29"
         },
         {
           "detail": {
@@ -163,7 +163,7 @@
         ],
         "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-09-12T05:12:42.270959+00:00",
+          "retrieved_at": "2026-09-13T05:27:27.616000+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT06516965"
         },
@@ -182,7 +182,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-10-14",
-      "generated_at": "2026-09-12T05:12:45.822966+00:00",
+      "generated_at": "2026-09-13T05:27:32.022666+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -190,12 +190,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 37,
+            "days_to_catalyst": 36,
             "event_date": "2026-10-19"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-37"
+          "reason": "In the entry window at T-36"
         },
         {
           "detail": {
@@ -286,7 +286,7 @@
         ],
         "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-09-12T05:12:41.341470+00:00",
+          "retrieved_at": "2026-09-13T05:27:26.484596+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT06245408"
         },
@@ -305,7 +305,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-10-17",
-      "generated_at": "2026-09-12T05:12:46.144211+00:00",
+      "generated_at": "2026-09-13T05:27:32.131635+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -313,12 +313,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 40,
+            "days_to_catalyst": 39,
             "event_date": "2026-10-22"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-40"
+          "reason": "In the entry window at T-39"
         },
         {
           "detail": {
@@ -385,49 +385,29 @@
   ],
   "sources": [
     {
-      "elapsed_ms": 6106,
+      "elapsed_ms": 7580,
       "error": null,
       "name": "clinicaltrials.gov",
       "ok": true,
       "records": 3502
     },
     {
-      "elapsed_ms": 145,
+      "elapsed_ms": 103,
       "error": null,
       "name": "sec.company_tickers",
       "ok": true,
       "records": 6543
     },
     {
-      "elapsed_ms": 770,
+      "elapsed_ms": 690,
       "error": null,
       "name": "sec.companyfacts",
       "ok": true,
       "records": 3
     }
   ],
-  "started_at": "2026-09-12T05:12:39.115598+00:00",
+  "started_at": "2026-09-13T05:27:23.753112+00:00",
   "vetoes": [
-    {
-      "detail": {
-        "sponsor": "Moscow Regional Oncological Dispensary",
-        "sponsor_class": "OTHER_GOV"
-      },
-      "external_id": "NCT07514494",
-      "reason": "Sponsor class is OTHER_GOV, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "Moscow Regional Oncological Dispensary"
-    },
-    {
-      "detail": {
-        "sponsor": "City of Hope Medical Center",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT04561206",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "City of Hope Medical Center"
-    },
     {
       "detail": {
         "sponsor": "Memorial Sloan Kettering Cancer Center",
