@@ -1,11 +1,11 @@
 {
   "catalysts_found": 3347,
-  "catalysts_in_window": 158,
+  "catalysts_in_window": 157,
   "dry_run": true,
   "fatal_error": null,
-  "finished_at": "2026-10-04T06:28:46.333771+00:00",
+  "finished_at": "2026-10-05T06:22:02.094278+00:00",
   "healthy": true,
-  "run_id": "2026-10-04-a0da549f",
+  "run_id": "2026-10-05-3a0ca900",
   "signals": [
     {
       "catalyst": {
@@ -32,7 +32,7 @@
         ],
         "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-10-04T06:28:36.918372+00:00",
+          "retrieved_at": "2026-10-05T06:21:55.278873+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT05444257"
         },
@@ -51,7 +51,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-10-25",
-      "generated_at": "2026-10-04T06:28:46.040479+00:00",
+      "generated_at": "2026-10-05T06:22:01.356607+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -59,12 +59,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 26,
+            "days_to_catalyst": 25,
             "event_date": "2026-10-30"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-26"
+          "reason": "In the entry window at T-25"
         },
         {
           "detail": {
@@ -156,7 +156,7 @@
         ],
         "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-10-04T06:28:39.801765+00:00",
+          "retrieved_at": "2026-10-05T06:21:56.943306+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT04657991"
         },
@@ -175,7 +175,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-10-25",
-      "generated_at": "2026-10-04T06:28:46.161287+00:00",
+      "generated_at": "2026-10-05T06:22:01.861038+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -183,12 +183,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 26,
+            "days_to_catalyst": 25,
             "event_date": "2026-10-30"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-26"
+          "reason": "In the entry window at T-25"
         },
         {
           "detail": {
@@ -280,7 +280,7 @@
         ],
         "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-10-04T06:28:36.712777+00:00",
+          "retrieved_at": "2026-10-05T06:21:55.121634+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT06510816"
         },
@@ -299,7 +299,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-10-26",
-      "generated_at": "2026-10-04T06:28:46.333749+00:00",
+      "generated_at": "2026-10-05T06:22:02.094256+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -307,12 +307,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 27,
+            "days_to_catalyst": 26,
             "event_date": "2026-10-31"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-27"
+          "reason": "In the entry window at T-26"
         },
         {
           "detail": {
@@ -379,49 +379,29 @@
   ],
   "sources": [
     {
-      "elapsed_ms": 9317,
+      "elapsed_ms": 6006,
       "error": null,
       "name": "clinicaltrials.gov",
       "ok": true,
       "records": 3481
     },
     {
-      "elapsed_ms": 100,
+      "elapsed_ms": 218,
       "error": null,
       "name": "sec.company_tickers",
       "ok": true,
-      "records": 6519
+      "records": 6517
     },
     {
-      "elapsed_ms": 544,
+      "elapsed_ms": 966,
       "error": null,
       "name": "sec.companyfacts",
       "ok": true,
       "records": 3
     }
   ],
-  "started_at": "2026-10-04T06:28:36.365408+00:00",
+  "started_at": "2026-10-05T06:21:54.897242+00:00",
   "vetoes": [
-    {
-      "detail": {
-        "sponsor": "The Children's Hospital of Zhejiang University School of Medicine",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT06125405",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "The Children's Hospital of Zhejiang University School of Medicine"
-    },
-    {
-      "detail": {
-        "sponsor": "Dongzhimen Hospital, Beijing",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT06857487",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "Dongzhimen Hospital, Beijing"
-    },
     {
       "detail": {
         "sponsor": "Tanta University",
