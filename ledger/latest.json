@@ -1,11 +1,11 @@
 {
   "catalysts_found": 3358,
-  "catalysts_in_window": 118,
+  "catalysts_in_window": 108,
   "dry_run": true,
   "fatal_error": null,
-  "finished_at": "2026-10-12T06:40:49.826103+00:00",
+  "finished_at": "2026-10-13T07:11:02.699663+00:00",
   "healthy": true,
-  "run_id": "2026-10-12-1cf755a2",
+  "run_id": "2026-10-13-43b82653",
   "signals": [
     {
       "catalyst": {
@@ -36,7 +36,7 @@
         ],
         "phase_label": "PHASE2",
         "provenance": {
-          "retrieved_at": "2026-10-12T06:40:44.942124+00:00",
+          "retrieved_at": "2026-10-13T07:10:57.362193+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT05851443"
         },
@@ -55,7 +55,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-11-15",
-      "generated_at": "2026-10-12T06:40:49.499333+00:00",
+      "generated_at": "2026-10-13T07:11:02.218060+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -63,12 +63,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 39,
+            "days_to_catalyst": 38,
             "event_date": "2026-11-20"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-39"
+          "reason": "In the entry window at T-38"
         },
         {
           "detail": {
@@ -164,7 +164,7 @@
         ],
         "phase_label": "PHASE2",
         "provenance": {
-          "retrieved_at": "2026-10-12T06:40:46.670509+00:00",
+          "retrieved_at": "2026-10-13T07:10:59.205818+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT05822752"
         },
@@ -183,7 +183,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-11-25",
-      "generated_at": "2026-10-12T06:40:49.680881+00:00",
+      "generated_at": "2026-10-13T07:11:02.422028+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -191,12 +191,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 49,
+            "days_to_catalyst": 48,
             "event_date": "2026-11-30"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-49"
+          "reason": "In the entry window at T-48"
         },
         {
           "detail": {
@@ -265,139 +265,29 @@
   ],
   "sources": [
     {
-      "elapsed_ms": 8872,
+      "elapsed_ms": 9562,
       "error": null,
       "name": "clinicaltrials.gov",
       "ok": true,
       "records": 3470
     },
     {
-      "elapsed_ms": 144,
+      "elapsed_ms": 149,
       "error": null,
       "name": "sec.company_tickers",
       "ok": true,
-      "records": 6532
+      "records": 6542
     },
     {
-      "elapsed_ms": 848,
+      "elapsed_ms": 925,
       "error": null,
       "name": "sec.companyfacts",
       "ok": true,
       "records": 4
     }
   ],
-  "started_at": "2026-10-12T06:40:39.954842+00:00",
+  "started_at": "2026-10-13T07:10:52.057391+00:00",
   "vetoes": [
-    {
-      "detail": {
-        "sponsor": "M.D. Anderson Cancer Center",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT05774678",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "M.D. Anderson Cancer Center"
-    },
-    {
-      "detail": {
-        "sponsor": "Sir Run Run Shaw Hospital",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT05752136",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "Sir Run Run Shaw Hospital"
-    },
-    {
-      "detail": {
-        "sponsor": "NRG Oncology",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT04134260",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "NRG Oncology"
-    },
-    {
-      "detail": {
-        "sponsor": "Wes Ely",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT06631287",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "Wes Ely"
-    },
-    {
-      "detail": {
-        "sponsor": "Nathan Brashares Sackett",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT06853912",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "Nathan Brashares Sackett"
-    },
-    {
-      "detail": {
-        "sponsor": "Maastricht University Medical Center",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT06401824",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "Maastricht University Medical Center"
-    },
-    {
-      "detail": {
-        "sponsor": "University of Minnesota",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT06226077",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "University of Minnesota"
-    },
-    {
-      "detail": {
-        "sponsor": "Fudan University",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT06914687",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "Fudan University"
-    },
-    {
-      "detail": {
-        "sponsor": "University Health Network, Toronto",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT04510636",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "University Health Network, Toronto"
-    },
-    {
-      "detail": {
-        "sponsor": "Cancer Institute and Hospital, Chinese Academy of Medical Sciences",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT06154538",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "Cancer Institute and Hospital, Chinese Academy of Medical Sciences"
-    },
-    {
-      "detail": {
-        "sponsor": "University of Colorado, Denver",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT05969496",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "University of Colorado, Denver"
-    },
     {
       "external_id": "NCT06772168",
       "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
@@ -1381,6 +1271,16 @@
       "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
       "screen": "sponsor_class",
       "sponsor": "Tanta University"
+    },
+    {
+      "detail": {
+        "sponsor": "Hospices Civils de Lyon",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT05349006",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Hospices Civils de Lyon"
     }
   ]
 }
