@@ -3,133 +3,10 @@
   "catalysts_in_window": 125,
   "dry_run": true,
   "fatal_error": null,
-  "finished_at": "2026-10-24T05:09:54.468359+00:00",
+  "finished_at": "2026-10-25T05:26:18.794891+00:00",
   "healthy": true,
-  "run_id": "2026-10-24-72da875f",
+  "run_id": "2026-10-25-d045909b",
   "signals": [
-    {
-      "catalyst": {
-        "cik": "0000872589",
-        "conditions": [
-          "Overweight or Obesity"
-        ],
-        "date_is_estimated": true,
-        "design": {
-          "allocation": "RANDOMIZED",
-          "enrollment": 120,
-          "enrollment_is_estimated": false,
-          "masking": "QUADRUPLE",
-          "primary_purpose": "TREATMENT"
-        },
-        "event_date": "2026-11-13",
-        "event_type": "phase_2_completion",
-        "external_id": "NCT07431086",
-        "intervention_names": [
-          "Olatorepatide",
-          "Placebo"
-        ],
-        "intervention_types": [
-          "DRUG",
-          "DRUG"
-        ],
-        "phase_label": "PHASE2",
-        "provenance": {
-          "retrieved_at": "2026-10-24T05:09:50.242357+00:00",
-          "source": "clinicaltrials.gov",
-          "url": "https://clinicaltrials.gov/study/NCT07431086"
-        },
-        "sponsor": "Regeneron Pharmaceuticals",
-        "sponsor_class": "INDUSTRY",
-        "ticker": "REGN",
-        "title": "Study of Olatorepatide in Adult Participants Living With Overweight or Obesity in the US"
-      },
-      "caveats": [
-        "Primary completion date is when data collection ends, not when results are announced. The real catalyst may land weeks later.",
-        "Exit before the readout. A failed trial gaps 40-70% pre-market and a stop order will not protect you.",
-        "Event date is the sponsor's estimate and can move without notice.",
-        "Market cap unknown, so materiality was not checked. Confirm this readout is large relative to the company before acting.",
-        "Base rates - Phase 2 to Phase 3: 29% (UNVERIFIED); All indications, Phase 1 to approval: 8% (UNVERIFIED). These are unverified approximations shown for context only; they do not affect sizing or selection."
-      ],
-      "decision": "no_action",
-      "entry_price": null,
-      "exit_by": "2026-11-08",
-      "generated_at": "2026-10-24T05:09:53.448204+00:00",
-      "position_value": null,
-      "quantity": null,
-      "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
-      "screens": [
-        {
-          "detail": {
-            "date_is_estimated": true,
-            "days_to_catalyst": 20,
-            "event_date": "2026-11-13"
-          },
-          "name": "catalyst_window",
-          "passed": true,
-          "reason": "In the entry window at T-20"
-        },
-        {
-          "detail": {
-            "sponsor": "Regeneron Pharmaceuticals",
-            "sponsor_class": "INDUSTRY"
-          },
-          "name": "sponsor_class",
-          "passed": true,
-          "reason": "Industry-sponsored"
-        },
-        {
-          "detail": {
-            "intervention_types": [
-              "DRUG",
-              "DRUG"
-            ],
-            "tradeable_types": [
-              "DRUG"
-            ]
-          },
-          "name": "intervention_type",
-          "passed": true,
-          "reason": "Tradeable intervention: DRUG"
-        },
-        {
-          "detail": {
-            "allocation": "RANDOMIZED",
-            "enrollment": 120,
-            "enrollment_is_estimated": false,
-            "masking": "QUADRUPLE",
-            "min_enrollment": 100,
-            "primary_purpose": "TREATMENT"
-          },
-          "name": "trial_quality",
-          "passed": true,
-          "reason": "Enrollment 120 clears the 100 floor (randomised, masked)"
-        },
-        {
-          "detail": {
-            "cash_usd": 2455800000.0,
-            "cik": "0000872589",
-            "note": "operating cash flow non-negative",
-            "quarterly_burn_usd": -1078900000.0,
-            "runway_months": "infinite",
-            "source": "sec.companyfacts"
-          },
-          "name": "dilution",
-          "passed": true,
-          "reason": "Operating cash flow is non-negative; no near-term dilution pressure"
-        },
-        {
-          "detail": {
-            "market_cap_usd": null,
-            "max_market_cap_usd": 10000000000.0
-          },
-          "name": "materiality",
-          "passed": true,
-          "reason": "Market cap unavailable (no price source wired), so materiality could not be assessed. A readout at a large-cap sponsor may not move the stock."
-        }
-      ],
-      "stop_loss": null,
-      "ticker": "REGN"
-    },
     {
       "catalyst": {
         "cik": "0000078003",
@@ -161,7 +38,7 @@
         ],
         "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-10-24T05:09:43.838835+00:00",
+          "retrieved_at": "2026-10-25T05:26:08.329273+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT06641466"
         },
@@ -180,7 +57,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-11-24",
-      "generated_at": "2026-10-24T05:09:54.197408+00:00",
+      "generated_at": "2026-10-25T05:26:18.066786+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -188,12 +65,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 36,
+            "days_to_catalyst": 35,
             "event_date": "2026-11-29"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-36"
+          "reason": "In the entry window at T-35"
         },
         {
           "detail": {
@@ -287,7 +164,7 @@
         ],
         "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-10-24T05:09:43.605525+00:00",
+          "retrieved_at": "2026-10-25T05:26:08.093930+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT07505888"
         },
@@ -306,7 +183,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-11-25",
-      "generated_at": "2026-10-24T05:09:54.468206+00:00",
+      "generated_at": "2026-10-25T05:26:18.249000+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -314,12 +191,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 37,
+            "days_to_catalyst": 36,
             "event_date": "2026-11-30"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-37"
+          "reason": "In the entry window at T-36"
         },
         {
           "detail": {
@@ -382,32 +259,158 @@
       ],
       "stop_loss": null,
       "ticker": "SVA"
+    },
+    {
+      "catalyst": {
+        "cik": "0001706431",
+        "conditions": [
+          "Viral Hepatitis"
+        ],
+        "date_is_estimated": true,
+        "design": {
+          "allocation": "RANDOMIZED",
+          "enrollment": 100,
+          "enrollment_is_estimated": true,
+          "masking": "NONE",
+          "primary_purpose": "TREATMENT"
+        },
+        "event_date": "2026-11-30",
+        "event_type": "phase_2_completion",
+        "external_id": "NCT07142811",
+        "intervention_names": [
+          "Tobevibart",
+          "Elebsiran",
+          "Bulevirtide"
+        ],
+        "intervention_types": [
+          "DRUG",
+          "DRUG",
+          "DRUG"
+        ],
+        "phase_label": "PHASE2",
+        "provenance": {
+          "retrieved_at": "2026-10-25T05:26:15.812918+00:00",
+          "source": "clinicaltrials.gov",
+          "url": "https://clinicaltrials.gov/study/NCT07142811"
+        },
+        "sponsor": "Vir Biotechnology, Inc.",
+        "sponsor_class": "INDUSTRY",
+        "ticker": "VIR",
+        "title": "A Study to Evaluate Tobevibart+Elebsiran Versus Bulevirtide in Chronic HDV Infection"
+      },
+      "caveats": [
+        "Primary completion date is when data collection ends, not when results are announced. The real catalyst may land weeks later.",
+        "Exit before the readout. A failed trial gaps 40-70% pre-market and a stop order will not protect you.",
+        "Event date is the sponsor's estimate and can move without notice.",
+        "Market cap unknown, so materiality was not checked. Confirm this readout is large relative to the company before acting.",
+        "Base rates - Phase 2 to Phase 3: 29% (UNVERIFIED); Infectious disease, Phase 1 to approval: 19% (UNVERIFIED). These are unverified approximations shown for context only; they do not affect sizing or selection."
+      ],
+      "decision": "no_action",
+      "entry_price": null,
+      "exit_by": "2026-11-25",
+      "generated_at": "2026-10-25T05:26:18.794877+00:00",
+      "position_value": null,
+      "quantity": null,
+      "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
+      "screens": [
+        {
+          "detail": {
+            "date_is_estimated": true,
+            "days_to_catalyst": 36,
+            "event_date": "2026-11-30"
+          },
+          "name": "catalyst_window",
+          "passed": true,
+          "reason": "In the entry window at T-36"
+        },
+        {
+          "detail": {
+            "sponsor": "Vir Biotechnology, Inc.",
+            "sponsor_class": "INDUSTRY"
+          },
+          "name": "sponsor_class",
+          "passed": true,
+          "reason": "Industry-sponsored"
+        },
+        {
+          "detail": {
+            "intervention_types": [
+              "DRUG",
+              "DRUG",
+              "DRUG"
+            ],
+            "tradeable_types": [
+              "DRUG"
+            ]
+          },
+          "name": "intervention_type",
+          "passed": true,
+          "reason": "Tradeable intervention: DRUG"
+        },
+        {
+          "detail": {
+            "allocation": "RANDOMIZED",
+            "enrollment": 100,
+            "enrollment_is_estimated": true,
+            "masking": "NONE",
+            "min_enrollment": 100,
+            "primary_purpose": "TREATMENT"
+          },
+          "name": "trial_quality",
+          "passed": true,
+          "reason": "Enrollment 100 clears the 100 floor (open-label)"
+        },
+        {
+          "detail": {
+            "cash_usd": 278729000.0,
+            "cik": "0001706431",
+            "note": "",
+            "quarterly_burn_usd": 132386000.0,
+            "runway_months": 6.3,
+            "source": "sec.companyfacts"
+          },
+          "name": "dilution",
+          "passed": true,
+          "reason": "Cash runway 6.3 months clears the 6-month floor"
+        },
+        {
+          "detail": {
+            "market_cap_usd": null,
+            "max_market_cap_usd": 10000000000.0
+          },
+          "name": "materiality",
+          "passed": true,
+          "reason": "Market cap unavailable (no price source wired), so materiality could not be assessed. A readout at a large-cap sponsor may not move the stock."
+        }
+      ],
+      "stop_loss": null,
+      "ticker": "VIR"
     }
   ],
   "sources": [
     {
-      "elapsed_ms": 10217,
+      "elapsed_ms": 10317,
       "error": null,
       "name": "clinicaltrials.gov",
       "ok": true,
       "records": 3474
     },
     {
-      "elapsed_ms": 94,
+      "elapsed_ms": 157,
       "error": null,
       "name": "sec.company_tickers",
       "ok": true,
-      "records": 6542
+      "records": 6544
     },
     {
-      "elapsed_ms": 1276,
+      "elapsed_ms": 956,
       "error": null,
       "name": "sec.companyfacts",
       "ok": true,
-      "records": 3
+      "records": 5
     }
   ],
-  "started_at": "2026-10-24T05:09:42.874453+00:00",
+  "started_at": "2026-10-25T05:26:07.359739+00:00",
   "vetoes": [
     {
       "detail": {
@@ -566,6 +569,355 @@
       "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
       "screen": "ticker_resolution",
       "sponsor": "Saol Therapeutics Inc"
+    },
+    {
+      "detail": {
+        "cash_usd": 11198000.0,
+        "cik": "0001660334",
+        "note": "",
+        "quarterly_burn_usd": 9163000.0,
+        "runway_months": 3.7,
+        "source": "sec.companyfacts"
+      },
+      "external_id": "NCT07246590",
+      "reason": "Cash runway 3.7 months is below the 6-month floor. An equity offering is likely and would be priced at a discount to market.",
+      "screen": "dilution",
+      "sponsor": "Verrica Pharmaceuticals Inc.",
+      "ticker": "VRCA"
+    },
+    {
+      "detail": {
+        "allocation": "RANDOMIZED",
+        "enrollment": 85,
+        "enrollment_is_estimated": false,
+        "masking": "QUADRUPLE",
+        "min_enrollment": 100,
+        "primary_purpose": "TREATMENT"
+      },
+      "external_id": "NCT07605338",
+      "reason": "Enrollment 85 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "Colgate Palmolive"
+    },
+    {
+      "detail": {
+        "sponsor": "Tata Memorial Hospital",
+        "sponsor_class": "OTHER_GOV"
+      },
+      "external_id": "NCT03168880",
+      "reason": "Sponsor class is OTHER_GOV, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Tata Memorial Hospital"
+    },
+    {
+      "detail": {
+        "allocation": "NA",
+        "enrollment": 15,
+        "enrollment_is_estimated": true,
+        "masking": "NONE",
+        "min_enrollment": 100,
+        "primary_purpose": "TREATMENT"
+      },
+      "external_id": "NCT04706013",
+      "reason": "Enrollment 15 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "Medicure"
+    },
+    {
+      "detail": {
+        "sponsor": "Dana-Farber Cancer Institute",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT03020030",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Dana-Farber Cancer Institute"
+    },
+    {
+      "detail": {
+        "allocation": "RANDOMIZED",
+        "enrollment": 80,
+        "enrollment_is_estimated": true,
+        "masking": "DOUBLE",
+        "min_enrollment": 100,
+        "primary_purpose": "TREATMENT"
+      },
+      "external_id": "NCT06129175",
+      "reason": "Enrollment 80 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "Cytopeutics Sdn. Bhd."
+    },
+    {
+      "detail": {
+        "sponsor": "Tourcoing Hospital",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT04672525",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Tourcoing Hospital"
+    },
+    {
+      "detail": {
+        "allocation": "RANDOMIZED",
+        "enrollment": 4,
+        "enrollment_is_estimated": true,
+        "masking": "DOUBLE",
+        "min_enrollment": 100,
+        "primary_purpose": "TREATMENT"
+      },
+      "external_id": "NCT05462587",
+      "reason": "Enrollment 4 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "AUG Therapeutics"
+    },
+    {
+      "detail": {
+        "sponsor": "Asan Medical Center",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT05226169",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Asan Medical Center"
+    },
+    {
+      "external_id": "NCT03148418",
+      "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
+      "screen": "ticker_resolution",
+      "sponsor": "Hoffmann-La Roche"
+    },
+    {
+      "detail": {
+        "allocation": "NA",
+        "enrollment": 50,
+        "enrollment_is_estimated": true,
+        "masking": "NONE",
+        "min_enrollment": 100,
+        "primary_purpose": "TREATMENT"
+      },
+      "external_id": "NCT06833983",
+      "reason": "Enrollment 50 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "Gritgen Therapeutics Co., Ltd."
+    },
+    {
+      "detail": {
+        "cash_usd": 19636000.0,
+        "cik": "0001991792",
+        "note": "",
+        "quarterly_burn_usd": 56943000.0,
+        "runway_months": 1.0,
+        "source": "sec.companyfacts"
+      },
+      "external_id": "NCT06111235",
+      "reason": "Cash runway 1.0 months is below the 6-month floor. An equity offering is likely and would be priced at a discount to market.",
+      "screen": "dilution",
+      "sponsor": "CG Oncology, Inc.",
+      "ticker": "CGON"
+    },
+    {
+      "detail": {
+        "intervention_types": [
+          "OTHER",
+          "OTHER"
+        ],
+        "tradeable_types": []
+      },
+      "external_id": "NCT07029516",
+      "reason": "No tradeable intervention type. Found ['OTHER']; a behavioural or dietary trial is not a binary corporate event.",
+      "screen": "intervention_type",
+      "sponsor": "Wooshin Labottach Co., Ltd."
+    },
+    {
+      "detail": {
+        "sponsor": "NHS Greater Glasgow and Clyde",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT05179499",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "NHS Greater Glasgow and Clyde"
+    },
+    {
+      "detail": {
+        "sponsor": "Chang Gung Memorial Hospital",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT06111443",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Chang Gung Memorial Hospital"
+    },
+    {
+      "detail": {
+        "sponsor": "Penn State University",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT06120400",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Penn State University"
+    },
+    {
+      "detail": {
+        "allocation": "NON_RANDOMIZED",
+        "enrollment": 75,
+        "enrollment_is_estimated": true,
+        "masking": "NONE",
+        "min_enrollment": 100,
+        "primary_purpose": "TREATMENT"
+      },
+      "external_id": "NCT04895436",
+      "reason": "Enrollment 75 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "AbbVie"
+    },
+    {
+      "detail": {
+        "sponsor": "Nishtar Medical University",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07208799",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Nishtar Medical University"
+    },
+    {
+      "detail": {
+        "allocation": "NA",
+        "enrollment": 61,
+        "enrollment_is_estimated": false,
+        "masking": "NONE",
+        "min_enrollment": 100,
+        "primary_purpose": "TREATMENT"
+      },
+      "external_id": "NCT05596409",
+      "reason": "Enrollment 61 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "Stemline Therapeutics, Inc."
+    },
+    {
+      "detail": {
+        "allocation": "NA",
+        "enrollment": 14,
+        "enrollment_is_estimated": true,
+        "masking": "NONE",
+        "min_enrollment": 100,
+        "primary_purpose": "TREATMENT"
+      },
+      "external_id": "NCT06038331",
+      "reason": "Enrollment 14 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "TBF Genie Tissulaire"
+    },
+    {
+      "detail": {
+        "sponsor": "H. Lee Moffitt Cancer Center and Research Institute",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT05526989",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "H. Lee Moffitt Cancer Center and Research Institute"
+    },
+    {
+      "detail": {
+        "sponsor": "Rehan Ahmed",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07816224",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Rehan Ahmed"
+    },
+    {
+      "detail": {
+        "sponsor": "University of Utah",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT05168618",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "University of Utah"
+    },
+    {
+      "detail": {
+        "allocation": "NON_RANDOMIZED",
+        "enrollment": 80,
+        "enrollment_is_estimated": true,
+        "masking": "NONE",
+        "min_enrollment": 100,
+        "primary_purpose": "TREATMENT"
+      },
+      "external_id": "NCT06767813",
+      "reason": "Enrollment 80 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "Chia Tai Tianqing Pharmaceutical Group Nanjing Shunxin Pharmaceutical Co., Ltd."
+    },
+    {
+      "detail": {
+        "sponsor": "The First Affiliated Hospital of Zhengzhou University",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07770113",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "The First Affiliated Hospital of Zhengzhou University"
+    },
+    {
+      "detail": {
+        "sponsor": "Centro Cardiologico Monzino",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT06922994",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Centro Cardiologico Monzino"
+    },
+    {
+      "detail": {
+        "sponsor": "Saint John's Cancer Institute",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT06794645",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Saint John's Cancer Institute"
+    },
+    {
+      "detail": {
+        "sponsor": "Hospital General de Mexicali",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07245095",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Hospital General de Mexicali"
+    },
+    {
+      "detail": {
+        "allocation": "RANDOMIZED",
+        "enrollment": 3,
+        "enrollment_is_estimated": false,
+        "masking": "QUADRUPLE",
+        "min_enrollment": 100,
+        "primary_purpose": "TREATMENT"
+      },
+      "external_id": "NCT06284954",
+      "reason": "Enrollment 3 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "argenx"
+    },
+    {
+      "detail": {
+        "sponsor": "University of California, Davis",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT06173362",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "University of California, Davis"
     }
   ]
 }
