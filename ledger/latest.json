@@ -1,11 +1,11 @@
 {
   "catalysts_found": 3342,
-  "catalysts_in_window": 128,
+  "catalysts_in_window": 330,
   "dry_run": true,
   "fatal_error": null,
-  "finished_at": "2026-10-31T06:24:14.120756+00:00",
+  "finished_at": "2026-11-01T06:57:12.149442+00:00",
   "healthy": true,
-  "run_id": "2026-10-31-bd0553ec",
+  "run_id": "2026-11-01-44bca309",
   "signals": [
     {
       "catalyst": {
@@ -38,7 +38,7 @@
         ],
         "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-10-31T06:24:09.207796+00:00",
+          "retrieved_at": "2026-11-01T06:57:05.477756+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT06641466"
         },
@@ -57,7 +57,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-11-24",
-      "generated_at": "2026-10-31T06:24:13.333166+00:00",
+      "generated_at": "2026-11-01T06:57:11.362718+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -65,12 +65,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 29,
+            "days_to_catalyst": 28,
             "event_date": "2026-11-29"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-29"
+          "reason": "In the entry window at T-28"
         },
         {
           "detail": {
@@ -163,7 +163,7 @@
         ],
         "phase_label": "PHASE2",
         "provenance": {
-          "retrieved_at": "2026-10-31T06:24:11.604450+00:00",
+          "retrieved_at": "2026-11-01T06:57:09.003475+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT06843590"
         },
@@ -182,7 +182,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-11-25",
-      "generated_at": "2026-10-31T06:24:13.973113+00:00",
+      "generated_at": "2026-11-01T06:57:11.896886+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -190,12 +190,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 30,
+            "days_to_catalyst": 29,
             "event_date": "2026-11-30"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-30"
+          "reason": "In the entry window at T-29"
         },
         {
           "detail": {
@@ -286,7 +286,7 @@
         ],
         "phase_label": "PHASE2",
         "provenance": {
-          "retrieved_at": "2026-10-31T06:24:12.788240+00:00",
+          "retrieved_at": "2026-11-01T06:57:10.748841+00:00",
           "source": "clinicaltrials.gov",
           "url": "https://clinicaltrials.gov/study/NCT07656727"
         },
@@ -305,7 +305,7 @@
       "decision": "no_action",
       "entry_price": null,
       "exit_by": "2026-11-25",
-      "generated_at": "2026-10-31T06:24:14.120728+00:00",
+      "generated_at": "2026-11-01T06:57:12.149427+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -313,12 +313,12 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 30,
+            "days_to_catalyst": 29,
             "event_date": "2026-11-30"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-30"
+          "reason": "In the entry window at T-29"
         },
         {
           "detail": {
@@ -385,54 +385,29 @@
   ],
   "sources": [
     {
-      "elapsed_ms": 5272,
+      "elapsed_ms": 7988,
       "error": null,
       "name": "clinicaltrials.gov",
       "ok": true,
       "records": 3466
     },
     {
-      "elapsed_ms": 92,
+      "elapsed_ms": 140,
       "error": null,
       "name": "sec.company_tickers",
       "ok": true,
-      "records": 6541
+      "records": 6535
     },
     {
-      "elapsed_ms": 1123,
+      "elapsed_ms": 1069,
       "error": null,
       "name": "sec.companyfacts",
       "ok": true,
-      "records": 6
+      "records": 5
     }
   ],
-  "started_at": "2026-10-31T06:24:07.627110+00:00",
+  "started_at": "2026-11-01T06:57:02.947093+00:00",
   "vetoes": [
-    {
-      "detail": {
-        "sponsor": "Tanta University",
-        "sponsor_class": "OTHER"
-      },
-      "external_id": "NCT07229664",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "Tanta University"
-    },
-    {
-      "detail": {
-        "cash_usd": 8068357.0,
-        "cik": "0001516551",
-        "note": "",
-        "quarterly_burn_usd": 8557917.0,
-        "runway_months": 2.8,
-        "source": "sec.companyfacts"
-      },
-      "external_id": "NCT06577090",
-      "reason": "Cash runway 2.8 months is below the 6-month floor. An equity offering is likely and would be priced at a discount to market.",
-      "screen": "dilution",
-      "sponsor": "Skye Bioscience, Inc.",
-      "ticker": "SKYE"
-    },
     {
       "external_id": "NCT07124221",
       "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
