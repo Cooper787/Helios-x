@@ -1,32 +1,32 @@
 {
-  "catalysts_found": 3410,
-  "catalysts_in_window": 356,
+  "catalysts_found": 3371,
+  "catalysts_in_window": 304,
   "dry_run": true,
   "fatal_error": null,
-  "finished_at": "2026-11-10T07:51:18.135818+00:00",
+  "finished_at": "2026-11-11T07:19:14.993315+00:00",
   "healthy": true,
-  "run_id": "2026-11-10-d7a5b999",
+  "run_id": "2026-11-11-84873e5b",
   "signals": [
     {
       "catalyst": {
-        "cik": "0001280776",
+        "cik": "0000875045",
         "conditions": [
-          "Multiple Sclerosis, Relapsing-Remitting"
+          "Antibody-mediated Rejection"
         ],
         "date_is_estimated": true,
         "design": {
           "allocation": "RANDOMIZED",
-          "enrollment": 1100,
+          "enrollment": 132,
           "enrollment_is_estimated": false,
           "masking": "QUADRUPLE",
           "primary_purpose": "TREATMENT"
         },
-        "event_date": "2026-11-30",
+        "event_date": "2026-12-01",
         "event_type": "phase_3_completion",
-        "external_id": "NCT05201638",
+        "external_id": "NCT06685757",
         "intervention_names": [
-          "IMU-838 tablets",
-          "Placebo matching IMU-838 tablets"
+          "Felzartamab",
+          "Placebo"
         ],
         "intervention_types": [
           "DRUG",
@@ -34,139 +34,14 @@
         ],
         "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-11-10T07:51:09.861203+00:00",
+          "retrieved_at": "2026-11-11T07:19:07.886077+00:00",
           "source": "clinicaltrials.gov",
-          "url": "https://clinicaltrials.gov/study/NCT05201638"
+          "url": "https://clinicaltrials.gov/study/NCT06685757"
         },
-        "sponsor": "Immunic AG",
+        "sponsor": "Biogen",
         "sponsor_class": "INDUSTRY",
-        "ticker": "IMUX",
-        "title": "Study to Evaluate the Efficacy, Safety and Tolerability of IMU-838 in Patients With Relapsing Multiple Sclerosis"
-      },
-      "caveats": [
-        "Primary completion date is when data collection ends, not when results are announced. The real catalyst may land weeks later.",
-        "Exit before the readout. A failed trial gaps 40-70% pre-market and a stop order will not protect you.",
-        "Event date is the sponsor's estimate and can move without notice.",
-        "Market cap unknown, so materiality was not checked. Confirm this readout is large relative to the company before acting.",
-        "Base rates - Phase 3 to filing: 58% (UNVERIFIED); Neurology, Phase 1 to approval: 6% (UNVERIFIED). These are unverified approximations shown for context only; they do not affect sizing or selection."
-      ],
-      "decision": "no_action",
-      "entry_price": null,
-      "exit_by": "2026-11-25",
-      "generated_at": "2026-11-10T07:51:17.418097+00:00",
-      "position_value": null,
-      "quantity": null,
-      "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
-      "screens": [
-        {
-          "detail": {
-            "date_is_estimated": true,
-            "days_to_catalyst": 20,
-            "event_date": "2026-11-30"
-          },
-          "name": "catalyst_window",
-          "passed": true,
-          "reason": "In the entry window at T-20"
-        },
-        {
-          "detail": {
-            "sponsor": "Immunic AG",
-            "sponsor_class": "INDUSTRY"
-          },
-          "name": "sponsor_class",
-          "passed": true,
-          "reason": "Industry-sponsored"
-        },
-        {
-          "detail": {
-            "intervention_types": [
-              "DRUG",
-              "DRUG"
-            ],
-            "tradeable_types": [
-              "DRUG"
-            ]
-          },
-          "name": "intervention_type",
-          "passed": true,
-          "reason": "Tradeable intervention: DRUG"
-        },
-        {
-          "detail": {
-            "allocation": "RANDOMIZED",
-            "enrollment": 1100,
-            "enrollment_is_estimated": false,
-            "masking": "QUADRUPLE",
-            "min_enrollment": 100,
-            "primary_purpose": "TREATMENT"
-          },
-          "name": "trial_quality",
-          "passed": true,
-          "reason": "Enrollment 1100 clears the 100 floor (randomised, masked)"
-        },
-        {
-          "detail": {
-            "cash_usd": 155098000.0,
-            "cik": "0001280776",
-            "note": "",
-            "quarterly_burn_usd": 17301000.0,
-            "runway_months": 26.9,
-            "source": "sec.companyfacts"
-          },
-          "name": "dilution",
-          "passed": true,
-          "reason": "Cash runway 26.9 months clears the 6-month floor"
-        },
-        {
-          "detail": {
-            "market_cap_usd": null,
-            "max_market_cap_usd": 10000000000.0
-          },
-          "name": "materiality",
-          "passed": true,
-          "reason": "Market cap unavailable (no price source wired), so materiality could not be assessed. A readout at a large-cap sponsor may not move the stock."
-        }
-      ],
-      "stop_loss": null,
-      "ticker": "IMUX"
-    },
-    {
-      "catalyst": {
-        "cik": "0001551152",
-        "conditions": [
-          "Atopic Dermatitis"
-        ],
-        "date_is_estimated": true,
-        "design": {
-          "allocation": "RANDOMIZED",
-          "enrollment": 184,
-          "enrollment_is_estimated": false,
-          "masking": "NONE",
-          "primary_purpose": "TREATMENT"
-        },
-        "event_date": "2026-11-30",
-        "event_type": "phase_3_completion",
-        "external_id": "NCT06389136",
-        "intervention_names": [
-          "Upadacitinib 15mg Dose",
-          "Dupilumab 300mg Dose",
-          "Upadacitinib 30mg Dose"
-        ],
-        "intervention_types": [
-          "DRUG",
-          "DRUG",
-          "DRUG"
-        ],
-        "phase_label": "PHASE3",
-        "provenance": {
-          "retrieved_at": "2026-11-10T07:51:10.608733+00:00",
-          "source": "clinicaltrials.gov",
-          "url": "https://clinicaltrials.gov/study/NCT06389136"
-        },
-        "sponsor": "AbbVie",
-        "sponsor_class": "INDUSTRY",
-        "ticker": "ABBV",
-        "title": "A Study of Upadacitinib in Adult Participants With Moderate-to-Severe Atopic Dermatitis and Inadequate Response to Dupilumab"
+        "ticker": "BIIB",
+        "title": "A Study to Learn More About the Effects and Safety of Felzartamab Infusions in Adults With Kidney Transplants Who Have Antibody-Mediated Rejection (AMR)"
       },
       "caveats": [
         "Primary completion date is when data collection ends, not when results are announced. The real catalyst may land weeks later.",
@@ -177,8 +52,8 @@
       ],
       "decision": "no_action",
       "entry_price": null,
-      "exit_by": "2026-11-25",
-      "generated_at": "2026-11-10T07:51:17.709089+00:00",
+      "exit_by": "2026-11-26",
+      "generated_at": "2026-11-11T07:19:14.449841+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -187,7 +62,7 @@
           "detail": {
             "date_is_estimated": true,
             "days_to_catalyst": 20,
-            "event_date": "2026-11-30"
+            "event_date": "2026-12-01"
           },
           "name": "catalyst_window",
           "passed": true,
@@ -195,7 +70,7 @@
         },
         {
           "detail": {
-            "sponsor": "AbbVie",
+            "sponsor": "Biogen",
             "sponsor_class": "INDUSTRY"
           },
           "name": "sponsor_class",
@@ -205,7 +80,6 @@
         {
           "detail": {
             "intervention_types": [
-              "DRUG",
               "DRUG",
               "DRUG"
             ],
@@ -220,22 +94,22 @@
         {
           "detail": {
             "allocation": "RANDOMIZED",
-            "enrollment": 184,
+            "enrollment": 132,
             "enrollment_is_estimated": false,
-            "masking": "NONE",
+            "masking": "QUADRUPLE",
             "min_enrollment": 100,
             "primary_purpose": "TREATMENT"
           },
           "name": "trial_quality",
           "passed": true,
-          "reason": "Enrollment 184 clears the 100 floor (open-label)"
+          "reason": "Enrollment 132 clears the 100 floor (randomised, masked)"
         },
         {
           "detail": {
-            "cash_usd": 10774000000.0,
-            "cik": "0001551152",
+            "cash_usd": 2913700000.0,
+            "cik": "0000875045",
             "note": "operating cash flow non-negative",
-            "quarterly_burn_usd": -3829000000.0,
+            "quarterly_burn_usd": -645500000.0,
             "runway_months": "infinite",
             "source": "sec.companyfacts"
           },
@@ -254,55 +128,57 @@
         }
       ],
       "stop_loss": null,
-      "ticker": "ABBV"
+      "ticker": "BIIB"
     },
     {
       "catalyst": {
-        "cik": "0001709941",
+        "cik": "0000078003",
         "conditions": [
-          "Obesity and Cardiovascular Risk"
+          "Severe Alopecia Areata"
         ],
         "date_is_estimated": true,
         "design": {
           "allocation": "RANDOMIZED",
-          "enrollment": 160,
-          "enrollment_is_estimated": true,
-          "masking": "DOUBLE",
+          "enrollment": 208,
+          "enrollment_is_estimated": false,
+          "masking": "QUADRUPLE",
           "primary_purpose": "TREATMENT"
         },
-        "event_date": "2026-11-30",
-        "event_type": "phase_2_completion",
-        "external_id": "NCT07656727",
+        "event_date": "2026-12-02",
+        "event_type": "phase_3_completion",
+        "external_id": "NCT07029711",
         "intervention_names": [
-          "Oral BGE-102",
-          "Oral Placebo Matching BGE-102"
+          "Ritlecitinib higher dose",
+          "Ritlecitinib lower dose",
+          "Placebo"
         ],
         "intervention_types": [
           "DRUG",
+          "DRUG",
           "DRUG"
         ],
-        "phase_label": "PHASE2",
+        "phase_label": "PHASE3",
         "provenance": {
-          "retrieved_at": "2026-11-10T07:51:13.563778+00:00",
+          "retrieved_at": "2026-11-11T07:19:09.354187+00:00",
           "source": "clinicaltrials.gov",
-          "url": "https://clinicaltrials.gov/study/NCT07656727"
+          "url": "https://clinicaltrials.gov/study/NCT07029711"
         },
-        "sponsor": "BioAge Labs, Inc.",
+        "sponsor": "Pfizer",
         "sponsor_class": "INDUSTRY",
-        "ticker": "BIOA",
-        "title": "A Phase 2 Study to Evaluate the Pharmacodynamics, Safety and Tolerability of BGE-102 in Participants With Obesity and Cardiovascular Risk Factors"
+        "ticker": "PFE",
+        "title": "A Study to Learn About Medicine Called Ritlecitinib in Children Aged Between 6 to 12 Years With Severe Alopecia Areata"
       },
       "caveats": [
         "Primary completion date is when data collection ends, not when results are announced. The real catalyst may land weeks later.",
         "Exit before the readout. A failed trial gaps 40-70% pre-market and a stop order will not protect you.",
         "Event date is the sponsor's estimate and can move without notice.",
         "Market cap unknown, so materiality was not checked. Confirm this readout is large relative to the company before acting.",
-        "Base rates - Phase 2 to Phase 3: 29% (UNVERIFIED); All indications, Phase 1 to approval: 8% (UNVERIFIED). These are unverified approximations shown for context only; they do not affect sizing or selection."
+        "Base rates - Phase 3 to filing: 58% (UNVERIFIED); All indications, Phase 1 to approval: 8% (UNVERIFIED). These are unverified approximations shown for context only; they do not affect sizing or selection."
       ],
       "decision": "no_action",
       "entry_price": null,
-      "exit_by": "2026-11-25",
-      "generated_at": "2026-11-10T07:51:18.135796+00:00",
+      "exit_by": "2026-11-27",
+      "generated_at": "2026-11-11T07:19:14.699163+00:00",
       "position_value": null,
       "quantity": null,
       "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
@@ -310,16 +186,16 @@
         {
           "detail": {
             "date_is_estimated": true,
-            "days_to_catalyst": 20,
-            "event_date": "2026-11-30"
+            "days_to_catalyst": 21,
+            "event_date": "2026-12-02"
           },
           "name": "catalyst_window",
           "passed": true,
-          "reason": "In the entry window at T-20"
+          "reason": "In the entry window at T-21"
         },
         {
           "detail": {
-            "sponsor": "BioAge Labs, Inc.",
+            "sponsor": "Pfizer",
             "sponsor_class": "INDUSTRY"
           },
           "name": "sponsor_class",
@@ -329,6 +205,7 @@
         {
           "detail": {
             "intervention_types": [
+              "DRUG",
               "DRUG",
               "DRUG"
             ],
@@ -343,28 +220,28 @@
         {
           "detail": {
             "allocation": "RANDOMIZED",
-            "enrollment": 160,
-            "enrollment_is_estimated": true,
-            "masking": "DOUBLE",
+            "enrollment": 208,
+            "enrollment_is_estimated": false,
+            "masking": "QUADRUPLE",
             "min_enrollment": 100,
             "primary_purpose": "TREATMENT"
           },
           "name": "trial_quality",
           "passed": true,
-          "reason": "Enrollment 160 clears the 100 floor (randomised, masked)"
+          "reason": "Enrollment 208 clears the 100 floor (randomised, masked)"
         },
         {
           "detail": {
-            "cash_usd": 52666000.0,
-            "cik": "0001709941",
-            "note": "",
-            "quarterly_burn_usd": 24046000.0,
-            "runway_months": 6.6,
+            "cash_usd": 1824000000.0,
+            "cik": "0000078003",
+            "note": "operating cash flow non-negative",
+            "quarterly_burn_usd": -2615000000.0,
+            "runway_months": "infinite",
             "source": "sec.companyfacts"
           },
           "name": "dilution",
           "passed": true,
-          "reason": "Cash runway 6.6 months clears the 6-month floor"
+          "reason": "Operating cash flow is non-negative; no near-term dilution pressure"
         },
         {
           "detail": {
@@ -377,229 +254,524 @@
         }
       ],
       "stop_loss": null,
-      "ticker": "BIOA"
+      "ticker": "PFE"
+    },
+    {
+      "catalyst": {
+        "cik": "0001020214",
+        "conditions": [
+          "Healthy Subjects"
+        ],
+        "date_is_estimated": true,
+        "design": {
+          "allocation": "RANDOMIZED",
+          "enrollment": 120,
+          "enrollment_is_estimated": true,
+          "masking": "SINGLE",
+          "primary_purpose": "OTHER"
+        },
+        "event_date": "2026-12-15",
+        "event_type": "phase_2_completion",
+        "external_id": "NCT07015437",
+        "intervention_names": [
+          "INTERCEPT Blood System for RBCs",
+          "Infusion of autologous radiolabeled RBCs"
+        ],
+        "intervention_types": [
+          "DEVICE",
+          "OTHER"
+        ],
+        "phase_label": "PHASE2",
+        "provenance": {
+          "retrieved_at": "2026-11-11T07:19:13.328292+00:00",
+          "source": "clinicaltrials.gov",
+          "url": "https://clinicaltrials.gov/study/NCT07015437"
+        },
+        "sponsor": "Cerus Corporation",
+        "sponsor_class": "INDUSTRY",
+        "ticker": "CERS",
+        "title": "A Recovery and Lifespan Study Using INTERCEPT Red Blood Cells Prepared Using the INTERCEPT Blood System for RBCs With AS-1"
+      },
+      "caveats": [
+        "Primary completion date is when data collection ends, not when results are announced. The real catalyst may land weeks later.",
+        "Exit before the readout. A failed trial gaps 40-70% pre-market and a stop order will not protect you.",
+        "Event date is the sponsor's estimate and can move without notice.",
+        "Market cap unknown, so materiality was not checked. Confirm this readout is large relative to the company before acting.",
+        "Base rates - Phase 2 to Phase 3: 29% (UNVERIFIED); All indications, Phase 1 to approval: 8% (UNVERIFIED). These are unverified approximations shown for context only; they do not affect sizing or selection."
+      ],
+      "decision": "no_action",
+      "entry_price": null,
+      "exit_by": "2026-12-10",
+      "generated_at": "2026-11-11T07:19:14.993290+00:00",
+      "position_value": null,
+      "quantity": null,
+      "reason": "Passed timing and dilution screens, but no price source is wired up, so position size cannot be computed. Review manually.",
+      "screens": [
+        {
+          "detail": {
+            "date_is_estimated": true,
+            "days_to_catalyst": 34,
+            "event_date": "2026-12-15"
+          },
+          "name": "catalyst_window",
+          "passed": true,
+          "reason": "In the entry window at T-34"
+        },
+        {
+          "detail": {
+            "sponsor": "Cerus Corporation",
+            "sponsor_class": "INDUSTRY"
+          },
+          "name": "sponsor_class",
+          "passed": true,
+          "reason": "Industry-sponsored"
+        },
+        {
+          "detail": {
+            "intervention_types": [
+              "DEVICE",
+              "OTHER"
+            ],
+            "tradeable_types": [
+              "DEVICE"
+            ]
+          },
+          "name": "intervention_type",
+          "passed": true,
+          "reason": "Tradeable intervention: DEVICE"
+        },
+        {
+          "detail": {
+            "allocation": "RANDOMIZED",
+            "enrollment": 120,
+            "enrollment_is_estimated": true,
+            "masking": "SINGLE",
+            "min_enrollment": 100,
+            "primary_purpose": "OTHER"
+          },
+          "name": "trial_quality",
+          "passed": true,
+          "reason": "Enrollment 120 clears the 100 floor (randomised, masked)"
+        },
+        {
+          "detail": {
+            "cash_usd": 16350000.0,
+            "cik": "0001020214",
+            "note": "",
+            "quarterly_burn_usd": 3049000.0,
+            "runway_months": 16.1,
+            "source": "sec.companyfacts"
+          },
+          "name": "dilution",
+          "passed": true,
+          "reason": "Cash runway 16.1 months clears the 6-month floor"
+        },
+        {
+          "detail": {
+            "market_cap_usd": null,
+            "max_market_cap_usd": 10000000000.0
+          },
+          "name": "materiality",
+          "passed": true,
+          "reason": "Market cap unavailable (no price source wired), so materiality could not be assessed. A readout at a large-cap sponsor may not move the stock."
+        }
+      ],
+      "stop_loss": null,
+      "ticker": "CERS"
     }
   ],
   "sources": [
     {
-      "elapsed_ms": 8715,
+      "elapsed_ms": 8181,
       "error": null,
       "name": "clinicaltrials.gov",
       "ok": true,
-      "records": 3529
+      "records": 3509
     },
     {
-      "elapsed_ms": 99,
+      "elapsed_ms": 258,
       "error": null,
       "name": "sec.company_tickers",
       "ok": true,
-      "records": 6530
+      "records": 6537
     },
     {
-      "elapsed_ms": 948,
+      "elapsed_ms": 819,
       "error": null,
       "name": "sec.companyfacts",
       "ok": true,
-      "records": 5
+      "records": 3
     }
   ],
-  "started_at": "2026-11-10T07:51:08.368516+00:00",
+  "started_at": "2026-11-11T07:19:05.728436+00:00",
   "vetoes": [
     {
       "detail": {
-        "sponsor": "Assistance Publique - H\u00f4pitaux de Paris",
-        "sponsor_class": "OTHER"
+        "allocation": "NA",
+        "enrollment": 38,
+        "enrollment_is_estimated": true,
+        "masking": "NONE",
+        "min_enrollment": 100,
+        "primary_purpose": "PREVENTION"
       },
-      "external_id": "NCT03976063",
-      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
-      "screen": "sponsor_class",
-      "sponsor": "Assistance Publique - H\u00f4pitaux de Paris"
+      "external_id": "NCT04918173",
+      "reason": "Enrollment 38 is below the 100-patient floor for a registrational-scale readout.",
+      "screen": "trial_quality",
+      "sponsor": "Octapharma"
     },
     {
-      "external_id": "NCT06954961",
+      "detail": {
+        "sponsor": "University of Texas Southwestern Medical Center",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT03565913",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "University of Texas Southwestern Medical Center"
+    },
+    {
+      "external_id": "NCT06838000",
       "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
       "screen": "ticker_resolution",
-      "sponsor": "InventisBio Co., Ltd"
+      "sponsor": "Sanofi Pasteur, a Sanofi Company"
+    },
+    {
+      "detail": {
+        "sponsor": "The Second Affiliated Hospital of Kunming Medical University",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07712848",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "The Second Affiliated Hospital of Kunming Medical University"
+    },
+    {
+      "detail": {
+        "sponsor": "Ruijin Hospital",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07229547",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Ruijin Hospital"
+    },
+    {
+      "detail": {
+        "sponsor": "Zhejiang Cancer Hospital",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT06214195",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Zhejiang Cancer Hospital"
+    },
+    {
+      "detail": {
+        "sponsor": "Peking Union Medical College Hospital",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07376824",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Peking Union Medical College Hospital"
+    },
+    {
+      "external_id": "NCT06000956",
+      "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
+      "screen": "ticker_resolution",
+      "sponsor": "Tasly Pharmaceutical Group Co., Ltd"
+    },
+    {
+      "detail": {
+        "sponsor": "Region Stockholm",
+        "sponsor_class": "OTHER_GOV"
+      },
+      "external_id": "NCT06941636",
+      "reason": "Sponsor class is OTHER_GOV, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Region Stockholm"
+    },
+    {
+      "detail": {
+        "sponsor": "University of California, San Francisco",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT06140927",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "University of California, San Francisco"
+    },
+    {
+      "detail": {
+        "sponsor": "University of Rochester",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT03758989",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "University of Rochester"
+    },
+    {
+      "detail": {
+        "sponsor": "National Cancer Institute (NCI)",
+        "sponsor_class": "NIH"
+      },
+      "external_id": "NCT06161545",
+      "reason": "Sponsor class is NIH, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "National Cancer Institute (NCI)"
+    },
+    {
+      "detail": {
+        "sponsor": "AHS Cancer Control Alberta",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT05421416",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "AHS Cancer Control Alberta"
+    },
+    {
+      "detail": {
+        "sponsor": "National Cancer Institute (NCI)",
+        "sponsor_class": "NIH"
+      },
+      "external_id": "NCT06730100",
+      "reason": "Sponsor class is NIH, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "National Cancer Institute (NCI)"
     },
     {
       "detail": {
         "sponsor": "Second Affiliated Hospital, Zhejiang University, School of Medicine",
         "sponsor_class": "OTHER"
       },
-      "external_id": "NCT05429463",
+      "external_id": "NCT05926700",
       "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
       "screen": "sponsor_class",
       "sponsor": "Second Affiliated Hospital, Zhejiang University, School of Medicine"
     },
     {
       "detail": {
-        "sponsor": "Mayo Clinic",
+        "sponsor": "Institute of Hematology & Blood Diseases Hospital, China",
         "sponsor_class": "OTHER"
       },
-      "external_id": "NCT05206955",
+      "external_id": "NCT05979363",
       "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
       "screen": "sponsor_class",
-      "sponsor": "Mayo Clinic"
+      "sponsor": "Institute of Hematology & Blood Diseases Hospital, China"
     },
     {
       "detail": {
-        "sponsor": "Capital Medical University",
+        "sponsor": "Second Affiliated Hospital of Nanchang University",
         "sponsor_class": "OTHER"
       },
-      "external_id": "NCT06559241",
+      "external_id": "NCT06554613",
       "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
       "screen": "sponsor_class",
-      "sponsor": "Capital Medical University"
-    },
-    {
-      "external_id": "NCT06914895",
-      "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
-      "screen": "ticker_resolution",
-      "sponsor": "Eli Lilly and Company"
+      "sponsor": "Second Affiliated Hospital of Nanchang University"
     },
     {
       "detail": {
-        "cash_usd": 28247000.0,
-        "cik": "0001991792",
-        "note": "",
-        "quarterly_burn_usd": 56943000.0,
-        "runway_months": 1.5,
-        "source": "sec.companyfacts"
-      },
-      "external_id": "NCT06111235",
-      "reason": "Cash runway 1.5 months is below the 6-month floor. An equity offering is likely and would be priced at a discount to market.",
-      "screen": "dilution",
-      "sponsor": "CG Oncology, Inc.",
-      "ticker": "CGON"
-    },
-    {
-      "detail": {
-        "sponsor": "Ottawa Hospital Research Institute",
+        "sponsor": "Massachusetts General Hospital",
         "sponsor_class": "OTHER"
       },
-      "external_id": "NCT05169112",
+      "external_id": "NCT04992013",
       "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
       "screen": "sponsor_class",
-      "sponsor": "Ottawa Hospital Research Institute"
+      "sponsor": "Massachusetts General Hospital"
     },
     {
       "detail": {
-        "sponsor": "University Hospital, Brest",
+        "sponsor": "Second Affiliated Hospital of Soochow University",
         "sponsor_class": "OTHER"
       },
-      "external_id": "NCT05458622",
+      "external_id": "NCT07267234",
       "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
       "screen": "sponsor_class",
-      "sponsor": "University Hospital, Brest"
-    },
-    {
-      "external_id": "NCT06341335",
-      "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
-      "screen": "ticker_resolution",
-      "sponsor": "Akeso"
+      "sponsor": "Second Affiliated Hospital of Soochow University"
     },
     {
       "detail": {
-        "allocation": "RANDOMIZED",
-        "enrollment": 80,
-        "enrollment_is_estimated": true,
-        "masking": "DOUBLE",
-        "min_enrollment": 100,
-        "primary_purpose": "TREATMENT"
-      },
-      "external_id": "NCT06129175",
-      "reason": "Enrollment 80 is below the 100-patient floor for a registrational-scale readout.",
-      "screen": "trial_quality",
-      "sponsor": "Cytopeutics Sdn. Bhd."
-    },
-    {
-      "detail": {
-        "cash_usd": 11198000.0,
-        "cik": "0001660334",
-        "note": "",
-        "quarterly_burn_usd": 9163000.0,
-        "runway_months": 3.7,
-        "source": "sec.companyfacts"
-      },
-      "external_id": "NCT07246590",
-      "reason": "Cash runway 3.7 months is below the 6-month floor. An equity offering is likely and would be priced at a discount to market.",
-      "screen": "dilution",
-      "sponsor": "Verrica Pharmaceuticals Inc.",
-      "ticker": "VRCA"
-    },
-    {
-      "detail": {
-        "sponsor": "Chulalongkorn University",
+        "sponsor": "Anhui Provincial Cancer Hospital",
         "sponsor_class": "OTHER"
       },
-      "external_id": "NCT06030843",
+      "external_id": "NCT06714708",
       "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
       "screen": "sponsor_class",
-      "sponsor": "Chulalongkorn University"
+      "sponsor": "Anhui Provincial Cancer Hospital"
     },
     {
       "detail": {
-        "sponsor": "Chang Gung Memorial Hospital",
+        "sponsor": "Catherine Spina",
         "sponsor_class": "OTHER"
       },
-      "external_id": "NCT06111443",
+      "external_id": "NCT05915442",
       "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
       "screen": "sponsor_class",
-      "sponsor": "Chang Gung Memorial Hospital"
-    },
-    {
-      "external_id": "NCT06968585",
-      "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
-      "screen": "ticker_resolution",
-      "sponsor": "Sichuan Kelun-Biotech Biopharmaceutical Co., Ltd."
+      "sponsor": "Catherine Spina"
     },
     {
       "detail": {
-        "allocation": "NON_RANDOMIZED",
-        "enrollment": 49,
-        "enrollment_is_estimated": true,
-        "masking": "NONE",
-        "min_enrollment": 100,
-        "primary_purpose": "TREATMENT"
-      },
-      "external_id": "NCT02704858",
-      "reason": "Enrollment 49 is below the 100-patient floor for a registrational-scale readout.",
-      "screen": "trial_quality",
-      "sponsor": "Neonc Technologies, Inc."
-    },
-    {
-      "detail": {
-        "sponsor": "Jiangxi Provincial Cancer Hospital",
+        "sponsor": "Sidney Kimmel Comprehensive Cancer Center at Johns Hopkins",
         "sponsor_class": "OTHER"
       },
-      "external_id": "NCT05252078",
+      "external_id": "NCT04713046",
       "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
       "screen": "sponsor_class",
-      "sponsor": "Jiangxi Provincial Cancer Hospital"
+      "sponsor": "Sidney Kimmel Comprehensive Cancer Center at Johns Hopkins"
     },
     {
       "detail": {
-        "sponsor": "Sixth Affiliated Hospital, Sun Yat-sen University",
+        "sponsor": "Hebei Medical University Fourth Hospital",
         "sponsor_class": "OTHER"
       },
-      "external_id": "NCT07297004",
+      "external_id": "NCT06107673",
       "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
       "screen": "sponsor_class",
-      "sponsor": "Sixth Affiliated Hospital, Sun Yat-sen University"
+      "sponsor": "Hebei Medical University Fourth Hospital"
     },
     {
       "detail": {
-        "allocation": "NON_RANDOMIZED",
-        "enrollment": 75,
+        "sponsor": "The Affiliated Hospital of Qingdao University",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT06647680",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "The Affiliated Hospital of Qingdao University"
+    },
+    {
+      "detail": {
+        "sponsor": "Massachusetts General Hospital",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07070466",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Massachusetts General Hospital"
+    },
+    {
+      "detail": {
+        "sponsor": "Institute of Hematology & Blood Diseases Hospital, China",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07115654",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Institute of Hematology & Blood Diseases Hospital, China"
+    },
+    {
+      "detail": {
+        "sponsor": "Lakshmi Nayak, MD",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT04906096",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Lakshmi Nayak, MD"
+    },
+    {
+      "detail": {
+        "sponsor": "Tanta University",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07894484",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Tanta University"
+    },
+    {
+      "detail": {
+        "allocation": "NA",
+        "enrollment": 73,
         "enrollment_is_estimated": true,
         "masking": "NONE",
         "min_enrollment": 100,
-        "primary_purpose": "TREATMENT"
+        "primary_purpose": "PREVENTION"
       },
-      "external_id": "NCT03579836",
-      "reason": "Enrollment 75 is below the 100-patient floor for a registrational-scale readout.",
+      "external_id": "NCT07616700",
+      "reason": "Enrollment 73 is below the 100-patient floor for a registrational-scale readout.",
       "screen": "trial_quality",
-      "sponsor": "BeyondBio Inc."
+      "sponsor": "Haisco Pharmaceutical Group Co., Ltd."
+    },
+    {
+      "detail": {
+        "sponsor": "Second Affiliated Hospital, Zhejiang University, School of Medicine",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07716189",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Second Affiliated Hospital, Zhejiang University, School of Medicine"
+    },
+    {
+      "detail": {
+        "sponsor": "National Cancer Institute (NCI)",
+        "sponsor_class": "NIH"
+      },
+      "external_id": "NCT05724108",
+      "reason": "Sponsor class is NIH, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "National Cancer Institute (NCI)"
+    },
+    {
+      "detail": {
+        "sponsor": "Peking University First Hospital",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07386704",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Peking University First Hospital"
+    },
+    {
+      "external_id": "NCT06151574",
+      "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
+      "screen": "ticker_resolution",
+      "sponsor": "Boehringer Ingelheim"
+    },
+    {
+      "external_id": "NCT04957550",
+      "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
+      "screen": "ticker_resolution",
+      "sponsor": "Jiangsu HengRui Medicine Co., Ltd."
+    },
+    {
+      "external_id": "NCT06122779",
+      "reason": "Sponsor name did not resolve to a listed ticker (private, subsidiary, foreign, or renamed)",
+      "screen": "ticker_resolution",
+      "sponsor": "Bristol-Myers Squibb"
+    },
+    {
+      "detail": {
+        "sponsor": "Nantes University Hospital",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT06269900",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Nantes University Hospital"
+    },
+    {
+      "detail": {
+        "sponsor": "Riphah International University",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT07847541",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Riphah International University"
+    },
+    {
+      "detail": {
+        "sponsor": "Alliance for Clinical Trials in Oncology",
+        "sponsor_class": "OTHER"
+      },
+      "external_id": "NCT05647265",
+      "reason": "Sponsor class is OTHER, not INDUSTRY. Academic and government trials have no listed sponsor to re-rate.",
+      "screen": "sponsor_class",
+      "sponsor": "Alliance for Clinical Trials in Oncology"
     }
   ]
 }
